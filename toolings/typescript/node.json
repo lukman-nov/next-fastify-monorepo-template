@@ -5,6 +5,9 @@
   "compilerOptions": {
     "declaration": true,
     "declarationMap": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "emitExtension": true,
     "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "Bundler"

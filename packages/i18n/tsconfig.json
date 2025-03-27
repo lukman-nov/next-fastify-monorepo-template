@@ -1,5 +1,5 @@
 {
-  "extends": "@pos/tsconfig/base",
+  "extends": "@pos/tsconfig/node",
   "compilerOptions": {
     "outDir": "./dist",
     "baseUrl": "./src"
