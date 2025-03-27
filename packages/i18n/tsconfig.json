@@ -1,5 +1,5 @@
 {
-  "extends": "@pos/tsconfig/nextjs",
+  "extends": "@pos/tsconfig/base",
   "compilerOptions": {
     "outDir": "./dist",
     "baseUrl": "./src"

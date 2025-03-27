@@ -1,5 +1,5 @@
 {
-  "extends": "@pos/tsconfig/node",
+  "extends": "@pos/tsconfig/base",
   "include": ["**/*.ts", "tsup.config.ts"],
   "compilerOptions": {
     "baseUrl": "./",
