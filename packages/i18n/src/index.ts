@@ -1,5 +1,4 @@
 export * from './config';
-export * from './getAppMessages';
+export * from './get-messages';
 export * from './types';
-export * from './useI18nZodErrors';
-export * from './zodErrorMap';
+export * from './zod-error';

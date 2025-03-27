@@ -1,7 +1,6 @@
 {
   "extends": "@pos/tsconfig/base",
   "compilerOptions": {
-    "outDir": "./dist",
     "baseUrl": "./src"
   },
   "include": ["*.ts", "src"],

@@ -8,7 +8,6 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
     "dev": "tsc -w",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint . --max-warnings 0",

@@ -1,10 +1,11 @@
-import fs from 'fs';
+'use server';
+
+import * as fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import type { Messages } from 'use-intl';
 import { deepmerge } from 'deepmerge-ts';
 
-import type { Locales, Namespaces } from './types';
+import type { AppMessages, Locales, Namespaces } from '../types';
 
 interface GetAppMessages {
   ns: Namespaces;
@@ -14,7 +15,7 @@ interface GetAppMessages {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export async function getAppMessages({ ns, locale }: GetAppMessages): Promise<Messages> {
+export async function getAppMessages({ ns, locale }: GetAppMessages): Promise<AppMessages> {
   if (typeof window !== 'undefined') {
     throw new Error('getAppMessages can only be called on the server.');
   }
@@ -29,5 +30,5 @@ export async function getAppMessages({ ns, locale }: GetAppMessages): Promise<Me
   const messages = JSON.parse(fs.readFileSync(messagesPath, 'utf-8'));
   const globalsMessages = JSON.parse(fs.readFileSync(globalsPath, 'utf-8'));
 
-  return deepmerge(messages, globalsMessages) as Messages;
+  return deepmerge(messages, globalsMessages) as AppMessages;
 }

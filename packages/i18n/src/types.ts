@@ -16,5 +16,7 @@ declare module 'use-intl' {
   interface AppConfig {
     Locale: Locales;
     Messages: SourceMessages;
+    ApiMessages: ApiMessages;
+    AppMessages: AppMessages;
   }
 }
