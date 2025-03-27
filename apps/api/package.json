@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "./dist/server.js",
   "prettier": "@pos/prettier-config",
+  "type": "module",
   "scripts": {
     "start": "node dist/server.js",
     "build": "tsc",

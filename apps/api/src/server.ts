@@ -1,7 +1,6 @@
 import type { ZodTypeProvider } from 'fastify-type-provider-zod';
 import Fastify from 'fastify';
 import fp from 'fastify-plugin';
-
 import closeWithGrace from 'close-with-grace';
 
 import { IS_DEV } from './config';

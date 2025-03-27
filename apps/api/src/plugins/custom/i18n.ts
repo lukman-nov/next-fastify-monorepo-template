@@ -21,7 +21,7 @@ export const useIntl = (app: FastifyInstance) => {
 
       const matchedLocale: Locales = await getUserLocale({ fastifyRequest: request });
 
-      if (!matchedLocale.includes(locales)) {
+      if (!locales.includes(matchedLocale)) {
         messages = await getAppMessages({ ns: 'api', locale: defaultLocale });
       } else {
         messages = await getAppMessages({ ns: 'api', locale: matchedLocale });

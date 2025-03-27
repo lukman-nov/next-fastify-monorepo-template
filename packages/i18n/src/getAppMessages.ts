@@ -1,6 +1,7 @@
-import type { Locales, Namespaces } from 'types';
 import type { Messages } from 'use-intl';
 import { deepmerge } from 'deepmerge-ts';
+
+import type { Locales, Namespaces } from './types';
 
 interface GetAppMessages {
   ns: Namespaces;

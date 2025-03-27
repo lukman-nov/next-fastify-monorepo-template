@@ -8,7 +8,7 @@ import { defaultLocale, i18nCookieName } from '@pos/i18n';
 export async function getUserLocale(): Promise<Locales> {
   const cookieStore = await cookies();
   const locale = cookieStore.get(i18nCookieName)?.value ?? defaultLocale;
-  return locale;
+  return locale as Locales;
 }
 
 export async function setUserLocale(locale: Locales) {
