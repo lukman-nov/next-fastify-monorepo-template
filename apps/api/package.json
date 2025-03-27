@@ -5,7 +5,7 @@
   "prettier": "@pos/prettier-config",
   "scripts": {
     "start": "node dist/server.js",
-    "build": "tsup",
+    "build": "tsc",
     "dev": "pnpm env:load tsx watch src/server.ts | pino-pretty --colorize",
     "env:load": "dotenv -e ../../.env --",
     "lint": "pnpm env:load eslint --max-warnings 0",
