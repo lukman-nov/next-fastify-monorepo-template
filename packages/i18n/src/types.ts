@@ -1,7 +1,7 @@
 import type apiMessages from '../locales/api/en.json';
 import type appMessages from '../locales/app/en.json';
 import type globalsMessages from '../locales/globals/en.json';
-import type { locales, namespaces } from './config';
+import type { locales, namespaces } from './config.ts';
 
 export type Locales = (typeof locales)[number];
 export type Namespaces = (typeof namespaces)[number];

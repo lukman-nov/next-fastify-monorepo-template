@@ -1,6 +1,12 @@
 {
   "extends": "@pos/tsconfig/node",
   "compilerOptions": {
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strict": true,
     "outDir": "./dist",
     "baseUrl": "./src"
   },

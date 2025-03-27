@@ -3,7 +3,7 @@
 import { useTranslations } from 'use-intl';
 import { z } from 'zod';
 
-import { makeZodI18nMap } from './zodErrorMap';
+import { makeZodI18nMap } from './zodErrorMap.ts';
 
 export const useI18nZodErrors = () => {
   const t = useTranslations('zod');
