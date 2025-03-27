@@ -1,4 +1,5 @@
-import { join } from 'node:path';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import type { FastifyInstance, FastifyPluginOptions } from 'fastify';
 import { serializerCompiler, validatorCompiler } from 'fastify-type-provider-zod';
 import fastifyAutoload from '@fastify/autoload';
@@ -14,6 +15,9 @@ export const options = {
   },
 };
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 export default async function serverApp(app: FastifyInstance, opts: FastifyPluginOptions) {
   delete opts.skipOverride;
 
@@ -21,12 +25,12 @@ export default async function serverApp(app: FastifyInstance, opts: FastifyPlugi
   app.setValidatorCompiler(validatorCompiler);
 
   await app.register(fastifyAutoload, {
-    dir: join(__dirname + '../../', 'plugins/custom'),
+    dir: path.resolve(__dirname + '../../', 'plugins/custom'),
     options: { ...opts },
   });
 
   await app.register(fastifyAutoload, {
-    dir: join(__dirname + '../../', 'plugins/external'),
+    dir: path.resolve(__dirname + '../../', 'plugins/external'),
     options: { ...opts },
   });
 
@@ -59,7 +63,7 @@ export default async function serverApp(app: FastifyInstance, opts: FastifyPlugi
   );
 
   app.register(fastifyAutoload, {
-    dir: join(__dirname + '../../', 'routes'),
+    dir: path.resolve(__dirname + '../../', 'routes'),
     autoHooks: true,
     cascadeHooks: true,
     options: { ...opts },
