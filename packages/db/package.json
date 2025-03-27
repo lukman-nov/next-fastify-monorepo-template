@@ -1,0 +1,42 @@
+{
+  "name": "@pos/db",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/client.ts"
+  },
+  "scripts": {
+    "db:migrate:reset": "prisma migrate reset",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:format": "prisma format",
+    "db:generate": "prisma generate",
+    "db:studio": "prisma studio",
+    "db:push": "prisma db push",
+    "db:seed": "tsx src/seed.ts",
+    "build": "tsup",
+    "dev": "pnpm env:load tsup src/* --watch",
+    "env:load": "dotenv -e ../../.env --",
+    "lint": "eslint src/* --max-warnings 0",
+    "check-types": "tsc --noEmit --emitDeclarationOnly false",
+    "studio": "prisma studio"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@pos/eslint-config": "workspace:*",
+    "@pos/prettier-config": "workspace:*",
+    "@pos/tsconfig": "workspace:*",
+    "dotenv-cli": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "prisma": "^6.5.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.5.0"
+  },
+  "prettier": "@pos/prettier-config"
+}

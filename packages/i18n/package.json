@@ -1,0 +1,31 @@
+{
+  "name": "@pos/i18n",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@pos/eslint-config": "workspace:*",
+    "@pos/prettier-config": "workspace:*",
+    "@pos/tsconfig": "workspace:*",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  },
+  "prettier": "@pos/prettier-config",
+  "dependencies": {
+    "deepmerge-ts": "^7.1.5",
+    "use-intl": "catalog:",
+    "zod": "catalog:"
+  }
+}

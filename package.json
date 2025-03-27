@@ -1,0 +1,52 @@
+{
+  "name": "pos-apps",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@10.4.1",
+  "prettier": "@pos/prettier-config",
+  "scripts": {
+    "db:migrate:reset": "prisma migrate reset",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:format": "prisma format",
+    "db:generate": "prisma generate",
+    "db:studio": "prisma studio",
+    "db:push": "prisma db push",
+    "db:seed": "tsx src/seed.ts",
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint --fix",
+    "format": "turbo run format --continue -- --cache --cache-location .cache/.prettiercache",
+    "format:fix": "turbo run format --continue -- --write --cache --cache-location .cache/.prettiercache",
+    "check-types": "turbo run check-types"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.5.0"
+  },
+  "devDependencies": {
+    "@pos/eslint-config": "workspace:*",
+    "@pos/prettier-config": "workspace:*",
+    "@pos/tsconfig": "workspace:*",
+    "@turbo/gen": "^2.4.4",
+    "prettier": "catalog:",
+    "prisma": "^6.5.0",
+    "turbo": "^2.4.4",
+    "typescript": "catalog:"
+  },
+  "prisma": {
+    "schema": "packages/db/prisma/schema.prisma"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "esbuild",
+      "prisma"
+    ]
+  }
+}

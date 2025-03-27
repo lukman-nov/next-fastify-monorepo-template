@@ -1,0 +1,43 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm env:load next dev --turbopack --port 3000",
+    "env:load": "dotenv -e ../../.env --",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "check-types": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@pos/ui": "workspace:*",
+    "@pos/i18n": "workspace:*",
+    "@t3-oss/env-nextjs": "^0.12.0",
+    "@tanstack/react-query": "^5.69.0",
+    "@tanstack/react-query-devtools": "^5.69.0",
+    "dotenv-cli": "catalog:",
+    "ky": "^1.7.5",
+    "lucide-react": "catalog:",
+    "next": "^15.2.3",
+    "next-intl": "catalog:",
+    "next-themes": "catalog:",
+    "react": "catalog:react19",
+    "react-dom": "catalog:react19",
+    "sonner": "^2.0.1",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@pos/eslint-config": "workspace:^",
+    "@pos/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:react19",
+    "@types/react-dom": "catalog:react19",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  }
+}

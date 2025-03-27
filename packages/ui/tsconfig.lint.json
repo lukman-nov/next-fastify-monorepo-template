@@ -1,0 +1,8 @@
+{
+  "extends": "@pos/tsconfig/react-library",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["src", "turbo"],
+  "exclude": ["node_modules", "dist"]
+}

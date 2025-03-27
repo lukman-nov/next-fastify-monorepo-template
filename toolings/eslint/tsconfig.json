@@ -1,0 +1,5 @@
+{
+  "extends": "@pos/tsconfig/base",
+  "include": ["."],
+  "exclude": ["node_modules"]
+}
