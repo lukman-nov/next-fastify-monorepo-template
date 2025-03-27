@@ -1,8 +1,6 @@
 {
-  "extends": "@pos/tsconfig/node",
+  "extends": "@pos/tsconfig/base",
   "compilerOptions": {
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
     "outDir": "./dist",
     "baseUrl": "./src"
   },
