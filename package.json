@@ -2,6 +2,7 @@
   "name": "pos-apps",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "packageManager": "pnpm@10.4.1",
   "prettier": "@pos/prettier-config",
   "scripts": {

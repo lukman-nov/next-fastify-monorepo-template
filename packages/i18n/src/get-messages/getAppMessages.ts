@@ -2,7 +2,6 @@
 
 import * as fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 import { deepmerge } from 'deepmerge-ts';
 
 import type { ApiMessages, AppMessages, Locales, Namespaces } from '../types';
@@ -14,8 +13,7 @@ interface GetAppMessages<T extends Namespaces> {
 
 type MessagesType<T extends Namespaces> = T extends 'api' ? ApiMessages : AppMessages;
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = process.cwd();
 
 export async function getAppMessages<T extends Namespaces>({
   ns,

@@ -1,5 +1,4 @@
 import path from 'path';
-import { fileURLToPath } from 'url';
 import type { FastifyInstance, FastifyPluginOptions } from 'fastify';
 import { serializerCompiler, validatorCompiler } from 'fastify-type-provider-zod';
 import fastifyAutoload from '@fastify/autoload';
@@ -15,8 +14,7 @@ export const options = {
   },
 };
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = process.cwd();
 
 export default async function serverApp(app: FastifyInstance, opts: FastifyPluginOptions) {
   delete opts.skipOverride;
