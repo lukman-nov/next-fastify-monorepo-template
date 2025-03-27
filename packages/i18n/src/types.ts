@@ -10,13 +10,11 @@ export type GlobalsMessages = typeof globalsMessages;
 export type ApiMessages = typeof apiMessages & GlobalsMessages;
 export type AppMessages = typeof appMessages & GlobalsMessages;
 
-type SourceMessages = GlobalsMessages & ApiMessages & AppMessages;
+export type Messages<T extends Namespaces> = T extends 'api' ? ApiMessages : AppMessages;
 
 declare module 'use-intl' {
   interface AppConfig {
     Locale: Locales;
-    Messages: SourceMessages;
-    ApiMessages: ApiMessages;
-    AppMessages: AppMessages;
+    Messages: Messages<Namespaces>;
   }
 }

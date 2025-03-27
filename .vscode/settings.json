@@ -1,0 +1,21 @@
+{
+  "editor.quickSuggestions": { "strings": "on" },
+
+  "eslint.rules.customizations": [{ "rule": "*", "severity": "warn" }],
+  "eslint.runtime": "node",
+  "eslint.workingDirectories": [{ "pattern": "apps/*/" }, { "pattern": "packages/*/" }, { "pattern": "tooling/*/" }],
+  "prettier.ignorePath": ".gitignore",
+
+  "i18n-ally.localesPaths": ["packages/i18n/locales"],
+  "i18n-ally.enabledFrameworks": ["next-intl"],
+  "i18n-ally.pathMatcher": "{namespace}/{locale}.json",
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sourceLanguage": "en",
+
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "tailwindCSS.experimental.configFile": "packages/ui/src/styles/globals.css",
+  "files.associations": { "*.css": "tailwindcss" }
+}
