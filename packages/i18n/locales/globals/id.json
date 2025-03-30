@@ -1,6 +1,25 @@
 {
   "forms": {
-    "errors": {}
+    "errors": {
+      "username-include-admin": "Nama pengguna tidak boleh mengandung \"ADMIN\".",
+      "username-only-contain": "Nama Pengguna hanya boleh mengandung huruf kecil, angka, underscore (_), dan dash (-).",
+      "username-must-not-spaces": "Nama Pengguna tidak boleh mengandung spasi.",
+      "username-must-not-uppercase": "Nama Pengguna tidak boleh mengandung huruf besar.",
+      "password-must-uppercase": "Password harus mengandung huruf besar.",
+      "password-must-lowercase": "Password harus mengandung huruf kecil.",
+      "password-must-number": "Password harus mengandung angka.",
+      "password-must-symbol": "Password harus mengandung spesial karakter (!@#$%^&*).",
+      "password-not-match": "Kata sandi tidak cocok."
+    },
+    "fistname": "Nama Depan",
+    "lastname": "Nama Belakang",
+    "username": "Nama Pengguna",
+    "email": "Email",
+    "sign-in": "Masuk",
+    "password": "Kata Sandi",
+    "confirmPassword": "Ulangi Kata sandi",
+    "forget-password": "Lupa Kata sandi",
+    "continue": "Lanjutkan"
   },
   "ui": {
     "locale-switcher": {

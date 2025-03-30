@@ -1,8 +1,8 @@
 import { SidebarInset, SidebarProvider } from '@zx/ui/components/sidebar';
-import { AppSidebar } from '@/components/app-sidebar';
 import { ChartAreaInteractive } from '@/components/chart-area-interactive';
 import { DataTable } from '@/components/data-table';
 import { SectionCards } from '@/components/section-cards';
+import { AppSidebar } from '@/components/sidebar/app-sidebar';
 import { SiteHeader } from '@/components/site-header';
 
 import data from './data.json';

@@ -1,3 +1,18 @@
 {
-  "hello-world": "Hello World"
+  "hello-world": "Hello World",
+  "auth": {
+    "sign-in": {
+      "title": "Welcome back",
+      "enter_to_your_account": "Sign in with your Email or Username",
+      "meta": "Login",
+      "register_here": "Don't have an account? <registerhere>Sign up</registerhere>",
+      "signin_with": "Or sign in with",
+      "terms_policy": "By clicking continue, you agree to our <terms>Terms of Service</terms> and <policy>Privacy Policy</policy>."
+    },
+    "sign-up": {
+      "or_register_with": "Or register with",
+      "have_account": "Already have an account? <signin> Sign In </signin>",
+      "title": "Welcome! Please fill in the details to get started."
+    }
+  }
 }

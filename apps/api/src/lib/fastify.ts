@@ -23,12 +23,12 @@ export default async function serverApp(app: FastifyInstance, opts: FastifyPlugi
   app.setValidatorCompiler(validatorCompiler);
 
   await app.register(fastifyAutoload, {
-    dir: path.resolve(__dirname + '../../', 'plugins/custom'),
+    dir: path.resolve(__dirname, 'src/plugins/custom'),
     options: { ...opts },
   });
 
   await app.register(fastifyAutoload, {
-    dir: path.resolve(__dirname + '../../', 'plugins/external'),
+    dir: path.resolve(__dirname, 'src/plugins/external'),
     options: { ...opts },
   });
 
@@ -61,7 +61,7 @@ export default async function serverApp(app: FastifyInstance, opts: FastifyPlugi
   );
 
   app.register(fastifyAutoload, {
-    dir: path.resolve(__dirname + '../../', 'routes'),
+    dir: path.resolve(__dirname, 'src/routes'),
     autoHooks: true,
     cascadeHooks: true,
     options: { ...opts },

@@ -7,7 +7,7 @@ import { bearer, username } from 'better-auth/plugins';
 import type { Roles } from '@zx/db';
 import { prisma } from '@zx/db';
 
-import { APP_NAME, COOKIEPREFIX, SESSION, USERNAME } from '../auth-config';
+import { APP_NAME, AUTH_COOKIE, SESSION, USERNAME } from '../auth-config';
 import { env } from '../lib';
 import { compare, hashed } from '../lib/utils';
 
@@ -26,7 +26,7 @@ const authServer = {
   },
   advanced: {
     generateId: false,
-    cookiePrefix: COOKIEPREFIX,
+    cookiePrefix: AUTH_COOKIE.PREFIX,
   },
   plugins: [
     bearer(),

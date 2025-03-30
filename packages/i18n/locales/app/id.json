@@ -1,3 +1,18 @@
 {
-  "hello-world": "Halo dunia"
+  "hello-world": "Halo dunia",
+  "auth": {
+    "sign-in": {
+      "title": "Selamat Datang Kembali",
+      "enter_to_your_account": "Masuk dengan Email atau Nama Pengguna Anda",
+      "meta": "Login",
+      "register_here": "Belum punya akun? <registerhere>Daftar disini</registerhere>",
+      "signin_with": "Atau lanjutkan melalui",
+      "terms_policy": "Dengan mengklik lanjutkan, Anda menyetujui <terms>Ketentuan Layanan</terms> dan <policy>Kebijakan Privasi</policy>"
+    },
+    "sign-up": {
+      "or_register_with": "Atau daftar melalui",
+      "have_account": "Sudah punya akun? <signin> Masuk disini </signin>",
+      "title": "Selamat Datang! Harap isi detail untuk memulai."
+    }
+  }
 }

@@ -6,18 +6,15 @@
 @import 'tw-animate-css';
 
 @import './themes.css';
-@import './custom.css';
+@import './typography.css' layer(base);
+@import './scrollbar.css' layer(base);
+@import './theme.css' layer(base);
+@import './sonner.css' layer(base);
+@import './animations.css' layer(base);
 
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
-
-@theme {
-  --font-sans: var(--font-sans);
-  --font-raleway: var(--font-raleway);
-  --font-geist-sans: var(--font-geist-sans);
-  --font-geist-mono: var(--font-geist-mono);
-}
 
 @utility container {
   margin-inline: auto;

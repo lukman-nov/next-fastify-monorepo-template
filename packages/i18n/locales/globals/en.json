@@ -1,6 +1,25 @@
 {
   "forms": {
-    "errors": {}
+    "errors": {
+      "username-include-admin": "Username must not contain \"ADMIN\".",
+      "username-only-contain": "Usernames can only contain lowercase letters, numbers, underscore (_), and dash (-).",
+      "username-must-not-spaces": "Username must not contain spaces.",
+      "username-must-not-uppercase": "Username must not contain uppercase letters.",
+      "password-must-uppercase": "Password must contain uppercase letters.",
+      "password-must-lowercase": "Password must contain lowercase letters.",
+      "password-must-number": "Passwords must contain numbers.",
+      "password-must-symbol": "Password must contain special characters (!@#$%^&*).",
+      "password-not-match": "Password does not match."
+    },
+    "fistname": "First Name",
+    "lastname": "Last Name",
+    "username": "Username",
+    "email": "Email",
+    "sign-in": "Sign In",
+    "password": "Password",
+    "confirmPassword": "Re-Password",
+    "forget-password": "Forget Password",
+    "continue": "Continue"
   },
   "ui": {
     "locale-switcher": {
