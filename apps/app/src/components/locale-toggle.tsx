@@ -5,7 +5,6 @@ import * as React from 'react';
 import { LanguagesIcon } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 
-import { setUserLocale } from '@/services/i18n-cookies';
 import { locales } from '@zx/i18n';
 import { buttonVariants } from '@zx/ui/components/button';
 import {
@@ -15,6 +14,7 @@ import {
   DropdownMenuTrigger,
 } from '@zx/ui/components/dropdown-menu';
 import { cn } from '@zx/ui/lib/utils';
+import { setUserLocale } from '@/services/i18n-cookies';
 
 interface MenuTriggerProps {
   menuTriggerClassName?: string;

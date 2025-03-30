@@ -4,9 +4,9 @@ import type { Viewport } from 'next';
 import { cookies } from 'next/headers';
 import { getLocale, getMessages } from 'next-intl/server';
 
+import { cn } from '@zx/ui/lib/utils';
 import { Providers } from '@/components/providers';
 import { fontVariables } from '@/lib/fonts';
-import { cn } from '@zx/ui/lib/utils';
 
 const META_THEME_COLORS = {
   light: '#ffffff',

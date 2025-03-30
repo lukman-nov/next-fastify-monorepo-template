@@ -1,11 +1,11 @@
 {
-  "name": "pos-apps",
+  "name": "next-fastify-monorepo-template",
   "version": "0.0.1",
   "private": true,
-  "type": "module",
   "packageManager": "pnpm@10.4.1",
   "prettier": "@zx/prettier-config",
   "scripts": {
+    "auth:generate": "npx @better-auth/cli generate --output packages/db/prisma/schema.prisma --config packages/auth/src/server/auth-server.ts",
     "db:migrate:reset": "prisma migrate reset",
     "db:migrate:deploy": "prisma migrate deploy",
     "db:migrate:dev": "prisma migrate dev",

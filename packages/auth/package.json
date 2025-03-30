@@ -1,0 +1,41 @@
+{
+  "name": "@zx/auth",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./server": "./src/server/index.ts",
+    "./client": "./src/client/index.ts",
+    "./types": "./types.d.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup",
+    "dev": "pnpm env:load tsup --watch",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint . --max-warnings 0",
+    "env:load": "dotenv -e ../../.env --",
+    "check-types": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "devDependencies": {
+    "@zx/eslint-config": "workspace:*",
+    "@zx/prettier-config": "workspace:*",
+    "@zx/tsconfig": "workspace:*",
+    "dotenv-cli": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "tsup": "^8.4.0",
+    "typescript": "catalog:"
+  },
+  "prettier": "@zx/prettier-config",
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.12.0",
+    "@zx/db": "workspace:*",
+    "bcryptjs": "^3.0.2",
+    "better-auth": "^1.2.5",
+    "dotenv-cli": "catalog:",
+    "next": "^15.2.4",
+    "zod": "catalog:"
+  }
+}

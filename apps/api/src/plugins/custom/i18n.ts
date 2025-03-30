@@ -4,8 +4,8 @@ import fp from 'fastify-plugin';
 import { createTranslator } from 'use-intl';
 
 import type { Locales } from '@zx/i18n';
-import { getUserLocale } from '@/utils/get-user-locale';
 import { defaultLocale, getAppMessages, locales } from '@zx/i18n';
+import { getUserLocale } from '@/utils/get-user-locale';
 
 declare module 'fastify' {
   export interface FastifyRequest {
