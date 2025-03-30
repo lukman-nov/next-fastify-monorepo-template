@@ -43,11 +43,11 @@ import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts';
 import { toast } from 'sonner';
 import { z } from 'zod';
 
-import type { ChartConfig } from '@pos/ui/components/chart';
-import { Badge } from '@pos/ui/components/badge';
-import { Button } from '@pos/ui/components/button';
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@pos/ui/components/chart';
-import { Checkbox } from '@pos/ui/components/checkbox';
+import type { ChartConfig } from '@zx/ui/components/chart';
+import { Badge } from '@zx/ui/components/badge';
+import { Button } from '@zx/ui/components/button';
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@zx/ui/components/chart';
+import { Checkbox } from '@zx/ui/components/checkbox';
 import {
   Drawer,
   DrawerClose,
@@ -57,7 +57,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from '@pos/ui/components/drawer';
+} from '@zx/ui/components/drawer';
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -65,14 +65,14 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@pos/ui/components/dropdown-menu';
-import { Input } from '@pos/ui/components/input';
-import { Label } from '@pos/ui/components/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@pos/ui/components/select';
-import { Separator } from '@pos/ui/components/separator';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@pos/ui/components/table';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@pos/ui/components/tabs';
-import { useIsMobile } from '@pos/ui/hooks/use-mobile';
+} from '@zx/ui/components/dropdown-menu';
+import { Input } from '@zx/ui/components/input';
+import { Label } from '@zx/ui/components/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@zx/ui/components/select';
+import { Separator } from '@zx/ui/components/separator';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@zx/ui/components/table';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@zx/ui/components/tabs';
+import { useIsMobile } from '@zx/ui/hooks/use-mobile';
 
 export const schema = z.object({
   id: z.number(),

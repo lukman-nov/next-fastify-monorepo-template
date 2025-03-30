@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@pos/ui/components/dropdown-menu';
+} from '@zx/ui/components/dropdown-menu';
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -18,7 +18,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from '@pos/ui/components/sidebar';
+} from '@zx/ui/components/sidebar';
 
 export function NavDocuments({
   items,

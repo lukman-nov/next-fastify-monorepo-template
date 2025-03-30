@@ -1,7 +1,7 @@
 import { IconTrendingDown, IconTrendingUp } from '@tabler/icons-react';
 
-import { Badge } from '@pos/ui/components/badge';
-import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from '@pos/ui/components/card';
+import { Badge } from '@zx/ui/components/badge';
+import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from '@zx/ui/components/card';
 
 export function SectionCards() {
   return (

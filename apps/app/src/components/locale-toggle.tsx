@@ -6,15 +6,15 @@ import { LanguagesIcon } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { setUserLocale } from '@/services/i18n-cookies';
-import { locales } from '@pos/i18n';
-import { buttonVariants } from '@pos/ui/components/button';
+import { locales } from '@zx/i18n';
+import { buttonVariants } from '@zx/ui/components/button';
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from '@pos/ui/components/dropdown-menu';
-import { cn } from '@pos/ui/lib/utils';
+} from '@zx/ui/components/dropdown-menu';
+import { cn } from '@zx/ui/lib/utils';
 
 interface MenuTriggerProps {
   menuTriggerClassName?: string;

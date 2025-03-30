@@ -3,7 +3,7 @@
 import { MoonStarIcon, SunIcon } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
-import { Button } from '@pos/ui/components/button';
+import { Button } from '@zx/ui/components/button';
 
 export function ThemeToggle({ className, ...props }: React.ComponentProps<typeof Button>) {
   const { theme, setTheme } = useTheme();

@@ -2,7 +2,7 @@
   "name": "api",
   "version": "1.0.0",
   "main": "./dist/server.js",
-  "prettier": "@pos/prettier-config",
+  "prettier": "@zx/prettier-config",
   "type": "module",
   "scripts": {
     "start": "node dist/server.js",
@@ -25,7 +25,7 @@
     "@fastify/rate-limit": "^10.2.2",
     "@fastify/swagger": "^9.4.2",
     "@fastify/swagger-ui": "^5.2.2",
-    "@pos/i18n": "workspace:*",
+    "@zx/i18n": "workspace:*",
     "@t3-oss/env-core": "^0.12.0",
     "accept-language-parser": "^1.5.0",
     "close-with-grace": "^2.2.0",
@@ -39,9 +39,9 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@pos/eslint-config": "workspace:*",
-    "@pos/prettier-config": "workspace:*",
-    "@pos/tsconfig": "workspace:*",
+    "@zx/eslint-config": "workspace:*",
+    "@zx/prettier-config": "workspace:*",
+    "@zx/tsconfig": "workspace:*",
     "@types/accept-language-parser": "^1.5.7",
     "@types/node": "catalog:",
     "eslint": "catalog:",

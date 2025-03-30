@@ -1,5 +1,5 @@
 {
-  "name": "@pos/db",
+  "name": "@zx/db",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -24,9 +24,9 @@
   },
   "devDependencies": {
     "@types/node": "catalog:",
-    "@pos/eslint-config": "workspace:*",
-    "@pos/prettier-config": "workspace:*",
-    "@pos/tsconfig": "workspace:*",
+    "@zx/eslint-config": "workspace:*",
+    "@zx/prettier-config": "workspace:*",
+    "@zx/tsconfig": "workspace:*",
     "dotenv-cli": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
@@ -38,5 +38,5 @@
   "dependencies": {
     "@prisma/client": "^6.5.0"
   },
-  "prettier": "@pos/prettier-config"
+  "prettier": "@zx/prettier-config"
 }

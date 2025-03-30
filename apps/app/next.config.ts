@@ -4,7 +4,7 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
-  transpilePackages: ['@pos/ui'],
+  transpilePackages: ['@zx/ui'],
   experimental: {
     serverActions: {
       bodySizeLimit: '10mb',

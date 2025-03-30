@@ -4,9 +4,9 @@ import type { AbstractIntlMessages } from 'next-intl';
 import * as React from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 
-import type { Locales } from '@pos/i18n';
-import { timeZone } from '@pos/i18n';
-import { ComponentsProvider } from '@pos/ui/components/ui-provider';
+import type { Locales } from '@zx/i18n';
+import { timeZone } from '@zx/i18n';
+import { ComponentsProvider } from '@zx/ui/components/ui-provider';
 
 interface ProvidersProp {
   locale: Locales;

@@ -53,41 +53,40 @@ export const makeZodI18nMap: MakeZodI18nMap = (option) => (issue, ctx) => {
   const path: any = issue.path.length > 0 && !!tForm ? { path: tForm(issue.path.join('.') as any) } : {};
 
   if (issue.code === ZodIssueCode.invalid_arguments) {
-    message = t('errors.invalid_arguments', { defaultValue: message, ...path });
+    message = t('zod.errors.invalid_arguments', { defaultValue: message, ...path });
   }
 
   if (issue.code === ZodIssueCode.invalid_return_type) {
-    message = t('errors.invalid_return_type', { defaultValue: message, ...path });
+    message = t('zod.errors.invalid_return_type', { defaultValue: message, ...path });
   }
 
   if (issue.code === ZodIssueCode.invalid_date) {
-    message = t('errors.invalid_date', { defaultValue: message, ...path });
+    message = t('zod.errors.invalid_date', { defaultValue: message, ...path });
   }
 
   if (issue.code === ZodIssueCode.invalid_union) {
-    message = t('errors.invalid_union', { defaultValue: message, ...path });
+    message = t('zod.errors.invalid_union', { defaultValue: message, ...path });
   }
 
   if (issue.code === ZodIssueCode.invalid_intersection_types) {
-    message = t('errors.invalid_intersection_types', { defaultValue: message, ...path });
+    message = t('zod.errors.invalid_intersection_types', { defaultValue: message, ...path });
   }
 
   if (issue.code === ZodIssueCode.not_multiple_of) {
-    message = t('errors.not_multiple_of', { multipleOf: issue.multipleOf, defaultValue: message, ...path });
+    message = t('zod.errors.not_multiple_of', { multipleOf: issue.multipleOf, defaultValue: message, ...path });
   }
 
   if (issue.code === ZodIssueCode.not_finite) {
-    message = t('errors.not_finite', { defaultValue: message, ...path });
+    message = t('zod.errors.not_finite', { defaultValue: message, ...path });
   }
 
   if (issue.code === ZodIssueCode.custom) {
     const { key, values } = getKeyAndValues(issue.params?.i18n, 'errors.custom');
-    // @ts-expect-error: Unreachable code error for declaring `use-intl messages`
     message = (tCustom ?? t)(key, { ...values, ...path });
   }
 
   if (issue.code === ZodIssueCode.invalid_union_discriminator) {
-    message = t('errors.invalid_union_discriminator', {
+    message = t('zod.errors.invalid_union_discriminator', {
       options: joinValues(issue.options),
       defaultValue: message,
       ...path,
@@ -95,7 +94,7 @@ export const makeZodI18nMap: MakeZodI18nMap = (option) => (issue, ctx) => {
   }
 
   if (issue.code === ZodIssueCode.invalid_literal) {
-    message = t('errors.invalid_literal', {
+    message = t('zod.errors.invalid_literal', {
       expected: JSON.stringify(issue.expected, jsonStringifyReplacer),
       defaultValue: message,
       ...path,
@@ -103,7 +102,7 @@ export const makeZodI18nMap: MakeZodI18nMap = (option) => (issue, ctx) => {
   }
 
   if (issue.code === ZodIssueCode.invalid_enum_value) {
-    message = t('errors.invalid_enum_value', {
+    message = t('zod.errors.invalid_enum_value', {
       options: joinValues(issue.options),
       received: issue.received,
       defaultValue: message,
@@ -112,7 +111,7 @@ export const makeZodI18nMap: MakeZodI18nMap = (option) => (issue, ctx) => {
   }
 
   if (issue.code === ZodIssueCode.unrecognized_keys) {
-    message = t('errors.unrecognized_keys', {
+    message = t('zod.errors.unrecognized_keys', {
       keys: joinValues(issue.keys, ', '),
       count: issue.keys.length,
       defaultValue: message,
@@ -123,8 +122,7 @@ export const makeZodI18nMap: MakeZodI18nMap = (option) => (issue, ctx) => {
   if (issue.code === ZodIssueCode.too_big) {
     const maximum = issue.type === 'date' ? new Date(issue.maximum as number) : issue.maximum;
     message = t(
-      // @ts-expect-error: Unreachable code error for declaring `use-intl messages`
-      `errors.too_big.${issue.type}.${issue.exact ? 'exact' : issue.inclusive ? 'inclusive' : 'not_inclusive'}`,
+      `zod.errors.too_big.${issue.type}.${issue.exact ? 'exact' : issue.inclusive ? 'inclusive' : 'not_inclusive'}`,
       {
         maximum,
         count: typeof maximum === 'number' ? maximum : undefined,
@@ -138,8 +136,7 @@ export const makeZodI18nMap: MakeZodI18nMap = (option) => (issue, ctx) => {
   if (issue.code === ZodIssueCode.too_small) {
     const minimum = issue.type === 'date' ? new Date(issue.minimum as number) : issue.minimum;
     message = t(
-      // @ts-expect-error: Unreachable code error for declaring `use-intl messages`
-      `errors.too_small.${issue.type}.${issue.exact ? 'exact' : issue.inclusive ? 'inclusive' : 'not_inclusive'}`,
+      `zod.errors.too_small.${issue.type}.${issue.exact ? 'exact' : issue.inclusive ? 'inclusive' : 'not_inclusive'}`,
       {
         minimum,
         count: typeof minimum === 'number' ? minimum : undefined,
@@ -152,11 +149,11 @@ export const makeZodI18nMap: MakeZodI18nMap = (option) => (issue, ctx) => {
 
   if (issue.code === ZodIssueCode.invalid_type) {
     if (issue.received === ZodParsedType.undefined) {
-      message = t('errors.invalid_type_received_undefined', { defaultValue: message, ...path });
+      message = t('zod.errors.invalid_type_received_undefined', { defaultValue: message, ...path });
     } else if (issue.received === ZodParsedType.null) {
-      message = t('errors.invalid_type_received_null', { defaultValue: message, ...path });
+      message = t('zod.errors.invalid_type_received_null', { defaultValue: message, ...path });
     } else {
-      message = t('errors.invalid_type', {
+      message = t('zod.errors.invalid_type', {
         expected: t(`types.${issue.expected}`, { defaultValue: issue.expected }),
         received: t(`types.${issue.received}`, { defaultValue: issue.received }),
         defaultValue: message,
@@ -168,23 +165,21 @@ export const makeZodI18nMap: MakeZodI18nMap = (option) => (issue, ctx) => {
   if (issue.code === ZodIssueCode.invalid_string) {
     if (typeof issue.validation === 'object') {
       if ('startsWith' in issue.validation) {
-        message = t(`errors.invalid_string.startsWith`, {
+        message = t(`zod.errors.invalid_string.startsWith`, {
           startsWith: issue.validation.startsWith,
           defaultValue: message,
           ...path,
         });
       } else if ('endsWith' in issue.validation) {
-        message = t(`errors.invalid_string.endsWith`, {
+        message = t(`zod.errors.invalid_string.endsWith`, {
           endsWith: issue.validation.endsWith,
           defaultValue: message,
           ...path,
         });
       }
     } else {
-      // @ts-expect-error: Unreachable code error for declaring `use-intl messages`
-      message = t(`errors.invalid_string.${issue.validation}`, {
-        // @ts-expect-error: Unreachable code error for declaring `use-intl messages`
-        validation: t(`validations.${issue.validation}`, {
+      message = t(`zod.errors.invalid_string.${issue.validation}`, {
+        validation: t(`zod.validations.${issue.validation}`, {
           defaultValue: issue.validation,
         }),
         defaultValue: message,

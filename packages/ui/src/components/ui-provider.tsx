@@ -3,8 +3,8 @@
 import * as React from 'react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
-import { Toaster } from '@pos/ui/components/sonner';
-import { TooltipProvider } from '@pos/ui/components/tooltip';
+import { Toaster } from '@zx/ui/components/sonner';
+import { TooltipProvider } from '@zx/ui/components/tooltip';
 
 import { ActiveThemeProvider } from './active-theme';
 

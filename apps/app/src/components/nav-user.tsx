@@ -2,7 +2,7 @@
 
 import { IconCreditCard, IconDotsVertical, IconLogout, IconNotification, IconUserCircle } from '@tabler/icons-react';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@pos/ui/components/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@zx/ui/components/avatar';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,8 +11,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@pos/ui/components/dropdown-menu';
-import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from '@pos/ui/components/sidebar';
+} from '@zx/ui/components/dropdown-menu';
+import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from '@zx/ui/components/sidebar';
 
 export function NavUser({
   user,

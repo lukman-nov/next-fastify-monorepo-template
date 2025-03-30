@@ -1,5 +1,5 @@
 {
-  "name": "@pos/eslint-config",
+  "name": "@zx/eslint-config",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -24,8 +24,8 @@
     "typescript-eslint": "^8.27.0"
   },
   "devDependencies": {
-    "@pos/prettier-config": "workspace:*",
-    "@pos/tsconfig": "workspace:*",
+    "@zx/prettier-config": "workspace:*",
+    "@zx/tsconfig": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"

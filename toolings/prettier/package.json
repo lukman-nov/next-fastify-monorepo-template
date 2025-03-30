@@ -1,5 +1,5 @@
 {
-  "name": "@pos/prettier-config",
+  "name": "@zx/prettier-config",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -19,8 +19,8 @@
   },
   "devDependencies": {
     "@types/node": "catalog:",
-    "@pos/tsconfig": "workspace:*",
+    "@zx/tsconfig": "workspace:*",
     "typescript": "catalog:"
   },
-  "prettier": "@pos/prettier-config"
+  "prettier": "@zx/prettier-config"
 }

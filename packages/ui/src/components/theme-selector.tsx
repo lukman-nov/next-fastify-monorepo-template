@@ -1,7 +1,7 @@
 'use client';
 
-import { useThemeConfig } from '@pos/ui/components/active-theme';
-import { Label } from '@pos/ui/components/label';
+import { useThemeConfig } from '@zx/ui/components/active-theme';
+import { Label } from '@zx/ui/components/label';
 import {
   Select,
   SelectContent,
@@ -11,7 +11,7 @@ import {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
-} from '@pos/ui/components/select';
+} from '@zx/ui/components/select';
 
 const DEFAULT_THEMES = [
   {

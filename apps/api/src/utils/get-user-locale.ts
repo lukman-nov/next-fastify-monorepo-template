@@ -1,8 +1,8 @@
 import type { FastifyRequest } from 'fastify';
 import * as acceptLanguageParser from 'accept-language-parser';
 
-import type { Locales } from '@pos/i18n';
-import { defaultLocale, locales } from '@pos/i18n';
+import type { Locales } from '@zx/i18n';
+import { defaultLocale, locales } from '@zx/i18n';
 
 export async function getUserLocale({ fastifyRequest }: { fastifyRequest: FastifyRequest }): Promise<Locales> {
   let userLocaleHeader: Locales = defaultLocale;

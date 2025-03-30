@@ -3,14 +3,14 @@
 import type { Icon } from '@tabler/icons-react';
 import { IconCirclePlusFilled, IconMail } from '@tabler/icons-react';
 
-import { Button } from '@pos/ui/components/button';
+import { Button } from '@zx/ui/components/button';
 import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from '@pos/ui/components/sidebar';
+} from '@zx/ui/components/sidebar';
 
 export function NavMain({
   items,

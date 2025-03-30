@@ -2,18 +2,18 @@
 
 import * as fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { deepmerge } from 'deepmerge-ts';
 
-import type { ApiMessages, AppMessages, Locales, Namespaces } from '../types';
+import type { Locales, MessagesType, Namespaces } from '../types';
 
 interface GetAppMessages<T extends Namespaces> {
   ns: T;
   locale: Locales;
 }
 
-type MessagesType<T extends Namespaces> = T extends 'api' ? ApiMessages : AppMessages;
-
-const __dirname = process.cwd();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export async function getAppMessages<T extends Namespaces>({
   ns,
@@ -23,8 +23,8 @@ export async function getAppMessages<T extends Namespaces>({
     throw new Error('getAppMessages can only be called on the server.');
   }
 
-  const messagesPath = path.join(__dirname, `../locales/${ns}/${locale}.json`);
-  const globalsPath = path.join(__dirname, `../locales/globals/${locale}.json`);
+  const messagesPath = path.join(__dirname, '../../locales', ns, `${locale}.json`);
+  const globalsPath = path.join(__dirname, '../../locales/globals', `${locale}.json`);
 
   if (!fs.existsSync(messagesPath) || !fs.existsSync(globalsPath)) {
     throw new Error('Message file not found.');

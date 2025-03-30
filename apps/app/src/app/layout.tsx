@@ -1,4 +1,4 @@
-import '@pos/ui/globals.css';
+import '@zx/ui/globals.css';
 
 import type { Viewport } from 'next';
 import { cookies } from 'next/headers';
@@ -6,7 +6,7 @@ import { getLocale, getMessages } from 'next-intl/server';
 
 import { Providers } from '@/components/providers';
 import { fontVariables } from '@/lib/fonts';
-import { cn } from '@pos/ui/lib/utils';
+import { cn } from '@zx/ui/lib/utils';
 
 const META_THEME_COLORS = {
   light: '#ffffff',
@@ -22,7 +22,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   const locale = await getLocale();
 
   const cookieStore = await cookies();
-  const activeThemeValue = cookieStore.get('@pos.active_theme')?.value;
+  const activeThemeValue = cookieStore.get('@zx.active_theme')?.value;
   const isScaled = activeThemeValue?.endsWith('-scaled');
 
   return (

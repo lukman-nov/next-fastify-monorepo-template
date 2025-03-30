@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono, Instrument_Sans, Inter, Mulish, Noto_Sans_Mono } from 'next/font/google';
 
-import { cn } from '@pos/ui/lib/utils';
+import { cn } from '@zx/ui/lib/utils';
 
 const fontSans = Geist({
   subsets: ['latin'],

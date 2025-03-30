@@ -3,12 +3,12 @@
 import * as React from 'react';
 import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts';
 
-import type { ChartConfig } from '@pos/ui/components/chart';
-import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from '@pos/ui/components/card';
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@pos/ui/components/chart';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@pos/ui/components/select';
-import { ToggleGroup, ToggleGroupItem } from '@pos/ui/components/toggle-group';
-import { useIsMobile } from '@pos/ui/hooks/use-mobile';
+import type { ChartConfig } from '@zx/ui/components/chart';
+import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from '@zx/ui/components/card';
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@zx/ui/components/chart';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@zx/ui/components/select';
+import { ToggleGroup, ToggleGroupItem } from '@zx/ui/components/toggle-group';
+import { useIsMobile } from '@zx/ui/hooks/use-mobile';
 
 export const description = 'An interactive area chart';
 

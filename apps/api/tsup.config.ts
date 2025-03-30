@@ -5,5 +5,5 @@ export default defineConfig({
   splitting: false,
   sourcemap: true,
   clean: true,
-  noExternal: ['@pos/i18n'],
+  noExternal: ['@zx/i18n'],
 });

@@ -1,8 +1,8 @@
-import { Button } from '@pos/ui/components/button';
-import { Separator } from '@pos/ui/components/separator';
-import { SidebarTrigger } from '@pos/ui/components/sidebar';
-import { ThemeSelector } from '@pos/ui/components/theme-selector';
-import { ThemeToggle } from '@pos/ui/components/theme-toggle';
+import { Button } from '@zx/ui/components/button';
+import { Separator } from '@zx/ui/components/separator';
+import { SidebarTrigger } from '@zx/ui/components/sidebar';
+import { ThemeSelector } from '@zx/ui/components/theme-selector';
+import { ThemeToggle } from '@zx/ui/components/theme-toggle';
 
 import { LocaleToggle } from './locale-toggle';
 

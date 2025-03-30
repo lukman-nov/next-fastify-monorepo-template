@@ -31,7 +31,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from '@pos/ui/components/sidebar';
+} from '@zx/ui/components/sidebar';
 
 const data = {
   user: {

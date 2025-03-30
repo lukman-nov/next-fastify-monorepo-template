@@ -1,4 +1,4 @@
 {
-  "extends": "@pos/tsconfig/base",
+  "extends": "@zx/tsconfig/base",
   "include": ["."]
 }

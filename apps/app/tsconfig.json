@@ -1,10 +1,10 @@
 {
-  "extends": "@pos/tsconfig/nextjs",
+  "extends": "@zx/tsconfig/nextjs",
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
-      "@pos/ui/*": ["../../packages/ui/src/*"]
+      "@zx/ui/*": ["../../packages/ui/src/*"]
     },
     "plugins": [
       {

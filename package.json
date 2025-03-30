@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "packageManager": "pnpm@10.4.1",
-  "prettier": "@pos/prettier-config",
+  "prettier": "@zx/prettier-config",
   "scripts": {
     "db:migrate:reset": "prisma migrate reset",
     "db:migrate:deploy": "prisma migrate deploy",
@@ -26,9 +26,9 @@
     "@prisma/client": "^6.5.0"
   },
   "devDependencies": {
-    "@pos/eslint-config": "workspace:*",
-    "@pos/prettier-config": "workspace:*",
-    "@pos/tsconfig": "workspace:*",
+    "@zx/eslint-config": "workspace:*",
+    "@zx/prettier-config": "workspace:*",
+    "@zx/tsconfig": "workspace:*",
     "@turbo/gen": "^2.4.4",
     "prettier": "catalog:",
     "prisma": "^6.5.0",

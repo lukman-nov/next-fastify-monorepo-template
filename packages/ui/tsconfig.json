@@ -1,9 +1,9 @@
 {
-  "extends": "@pos/tsconfig/react-library",
+  "extends": "@zx/tsconfig/react-library",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@pos/ui/*": ["./src/*"]
+      "@zx/ui/*": ["./src/*"]
     }
   },
   "include": ["."],

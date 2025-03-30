@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import { createContext, useContext, useEffect, useState } from 'react';
 
-const COOKIE_NAME = '@pos.active_theme';
+const COOKIE_NAME = '@zx.active_theme';
 const DEFAULT_THEME = 'default';
 
 function setThemeCookie(theme: string) {

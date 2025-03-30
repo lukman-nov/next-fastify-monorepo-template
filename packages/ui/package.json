@@ -1,5 +1,5 @@
 {
-  "name": "@pos/ui",
+  "name": "@zx/ui",
   "version": "0.0.0",
   "type": "module",
   "private": true,
@@ -44,9 +44,9 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@pos/eslint-config": "workspace:*",
-    "@pos/prettier-config": "workspace:*",
-    "@pos/tsconfig": "workspace:*",
+    "@zx/eslint-config": "workspace:*",
+    "@zx/prettier-config": "workspace:*",
+    "@zx/tsconfig": "workspace:*",
     "@tailwindcss/cli": "^4.0.14",
     "@tailwindcss/postcss": "^4.0.8",
     "@turbo/gen": "^2.4.2",
@@ -65,5 +65,5 @@
     "./components/*": "./src/components/*.tsx",
     "./hooks/*": "./src/hooks/*.ts"
   },
-  "prettier": "@pos/prettier-config"
+  "prettier": "@zx/prettier-config"
 }
