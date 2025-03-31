@@ -2,10 +2,11 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 
 import { Button } from '@zx/ui/components/button';
-import { useSignInWithGithub } from '@/app/actions/auth/sign-in';
+import { useSignInWithGithub } from '@/actions/auth/sign-in';
 
 import { Icons } from '../icons';
 
@@ -15,6 +16,7 @@ export function AuthGithubButton({
   ...props
 }: React.ComponentProps<typeof Button> & { text?: string }) {
   const router = useRouter();
+  const t = useTranslations();
 
   const { mutate, isPending } = useSignInWithGithub();
 
@@ -26,7 +28,7 @@ export function AuthGithubButton({
       onError(error, _variables, _context) {
         console.log(' signInGithub ~ error:', error);
         if (error instanceof Error) {
-          toast.error(error.message);
+          toast.error(t(`auth.errors.${error.message}` as never));
         }
       },
     });

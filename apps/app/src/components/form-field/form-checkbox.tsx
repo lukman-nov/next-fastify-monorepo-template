@@ -34,7 +34,7 @@ export default function FormCheckbox({ title, name, description, readOnly, class
           </FormControl>
 
           <div className="space-y-1 leading-none">
-            <FormLabel className={`text-sm`}>{title}</FormLabel>
+            <FormLabel className={`text-sm font-normal`}>{title}</FormLabel>
             {description && (
               <FormDescription className="inline-flex items-center gap-2 leading-normal [&>svg]:size-5 [&>svg]:text-blue-400">
                 <InfoIcon /> {description}

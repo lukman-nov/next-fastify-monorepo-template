@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 
 import { Button } from '@zx/ui/components/button';
-import { useSignInWithGoogle } from '@/app/actions/auth/sign-in';
+import { useSignInWithGoogle } from '@/actions/auth/sign-in';
 
 import { Icons } from '../icons';
 

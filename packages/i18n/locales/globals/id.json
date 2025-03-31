@@ -1,6 +1,8 @@
 {
   "forms": {
     "errors": {
+      "email_exist": "Email sudah terdaftar",
+      "username_exist": "Nama pengguna sudah terdaftar",
       "username-include-admin": "Nama pengguna tidak boleh mengandung \"ADMIN\".",
       "username-only-contain": "Nama Pengguna hanya boleh mengandung huruf kecil, angka, underscore (_), dan dash (-).",
       "username-must-not-spaces": "Nama Pengguna tidak boleh mengandung spasi.",
@@ -19,7 +21,16 @@
     "password": "Kata Sandi",
     "confirmPassword": "Ulangi Kata sandi",
     "forget-password": "Lupa Kata sandi",
-    "continue": "Lanjutkan"
+    "continue": "Lanjutkan",
+    "sign-up": {
+      "fistname-description": "Nama depan Anda",
+      "lastname-description": "Nama belakang Anda",
+      "username-description": "Ini adalah nama pengguna publik",
+      "email-description": "Email Anda untuk verifikasi",
+      "password-description": "Gunakan kata sandi yang kuat",
+      "confirmPassword-description": "Konfirmasikan kata sandi Anda"
+    },
+    "remember-me": "Ingat saya"
   },
   "ui": {
     "locale-switcher": {
@@ -138,6 +149,15 @@
       "cuid": "cuid",
       "regex": "regex",
       "datetime": "datetime"
+    }
+  },
+  "services": {
+    "verify-email": {
+      "subject": "Verifikasi Alamat Email Anda",
+      "main-text": "Terima kasih telah memulai proses pembuatan akun ZeroX Pos yang baru. Kami ingin memastikan bahwa ini benar-benar  Anda. Silakan klik tombol dibawah ini untuk melanjutkan prosess pembuatan akun. Jika Anda tidak ingin membuat akun akun, Anda dapat mengabaikan pesan ini.",
+      "button": "Verifikasi alamat email saya",
+      "caution-text": "ZeroX Project tidak akan pernah mengirimkan email kepada Anda dan meminta Anda untuk mengungkapkan atau memverifikasi kata sandi, kartu kredit atau nomor rekening perbankan.",
+      "helper-text": "Jika tombol tidak berfungsi, Anda dapat mengklik tautan di bawah ini."
     }
   }
 }

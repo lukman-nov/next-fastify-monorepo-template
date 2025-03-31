@@ -1,8 +1,5 @@
 {
-  "extends": "@zx/tsconfig/base",
-  "compilerOptions": {
-    "baseUrl": "./src"
-  },
-  "include": ["*.ts", "src"],
+  "extends": "@zx/tsconfig/node",
+  "include": ["*.d.ts", "src"],
   "exclude": ["node_modules"]
 }

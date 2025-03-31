@@ -1,6 +1,8 @@
 {
   "forms": {
     "errors": {
+      "username_exist": "User Name is registered",
+      "email_exist": "Email is registered",
       "username-include-admin": "Username must not contain \"ADMIN\".",
       "username-only-contain": "Usernames can only contain lowercase letters, numbers, underscore (_), and dash (-).",
       "username-must-not-spaces": "Username must not contain spaces.",
@@ -19,7 +21,16 @@
     "password": "Password",
     "confirmPassword": "Re-Password",
     "forget-password": "Forget Password",
-    "continue": "Continue"
+    "continue": "Continue",
+    "sign-up": {
+      "fistname-description": "Your first name",
+      "lastname-description": "Your last name",
+      "username-description": "This is a public username",
+      "email-description": "Your email for verification",
+      "password-description": "Use strong password",
+      "confirmPassword-description": "Confirm your password"
+    },
+    "remember-me": "Remember Me"
   },
   "ui": {
     "locale-switcher": {
@@ -138,6 +149,15 @@
       "cuid": "cuid",
       "regex": "regex",
       "datetime": "datetime"
+    }
+  },
+  "services": {
+    "verify-email": {
+      "subject": "Verify your email address",
+      "main-text": "Thank you for starting the process of creating a new ZeroX Pos account. We want to make sure that this is really you. Please click the button below to continue with the account creation process. If you don't want to create an account, you can ignore this message.",
+      "button": "Verify My Email Address",
+      "caution-text": "ZeroX Project will never send you an email asking you to reveal or verify your password, credit card or banking account number.",
+      "helper-text": "If the button is not working you can click the link below."
     }
   }
 }

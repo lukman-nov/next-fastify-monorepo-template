@@ -10,7 +10,7 @@ export default function AuthHeader() {
   return (
     <div className="border-border flex items-center justify-center gap-5 border-b border-dashed p-3">
       <Icons.logo className="size-10" />
-      <h2 className="p-0">{SITE_NAME}</h2>
+      <p className="p-0 text-2xl font-bold md:text-3xl">{SITE_NAME}</p>
       <Icons.logo className="size-10" />
     </div>
   );

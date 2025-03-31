@@ -1,6 +1,6 @@
 'use client';
 
-import { IconCreditCard, IconDotsVertical, IconLogout, IconNotification, IconUserCircle } from '@tabler/icons-react';
+import { IconCreditCard, IconDotsVertical, IconNotification, IconUserCircle } from '@tabler/icons-react';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@zx/ui/components/avatar';
 import {
@@ -13,6 +13,8 @@ import {
   DropdownMenuTrigger,
 } from '@zx/ui/components/dropdown-menu';
 import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from '@zx/ui/components/sidebar';
+
+import { SignOutButton } from '../auth/sign-out-button';
 
 export function NavUser({
   user,
@@ -79,9 +81,8 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <IconLogout />
-              Log out
+            <DropdownMenuItem className="p-0">
+              <SignOutButton variant={'ghost'} size={'sm'} className="w-full focus-visible:ring-0" />
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

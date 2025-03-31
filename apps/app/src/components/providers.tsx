@@ -6,7 +6,7 @@ import { dehydrate, HydrationBoundary, QueryClient, QueryClientProvider } from '
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { NextIntlClientProvider } from 'next-intl';
 
-import type { Locales } from '@zx/i18n';
+import type { Locales } from '@zx/i18n/types';
 import { timeZone } from '@zx/i18n';
 import { ComponentsProvider } from '@zx/ui/components/ui-provider';
 

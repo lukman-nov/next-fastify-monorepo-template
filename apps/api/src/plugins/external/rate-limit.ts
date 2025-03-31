@@ -2,7 +2,7 @@ import fastifyRateLimit from '@fastify/rate-limit';
 
 export const autoConfig = () => {
   return {
-    max: 5,
+    max: 20,
     timeWindow: '1 minute',
   };
 };

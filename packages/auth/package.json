@@ -32,6 +32,7 @@
   "prettier": "@zx/prettier-config",
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.12.0",
+    "@zx/email": "workspace:*",
     "@zx/db": "workspace:*",
     "bcryptjs": "^3.0.2",
     "better-auth": "^1.2.5",

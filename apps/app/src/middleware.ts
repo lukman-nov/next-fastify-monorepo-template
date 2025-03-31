@@ -7,11 +7,16 @@ import { AUTH_COOKIE } from '@zx/auth/config';
 export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   const cookieStore = await cookies();
-  const auth = cookieStore.get(`${AUTH_COOKIE.PREFIX}.session_token`);
+  const auth = cookieStore.get(AUTH_COOKIE);
 
   if (!auth && !pathname.includes('auth')) {
     const newUrl = new URL(`/auth/sign-in`, request.nextUrl.origin);
-    return NextResponse.redirect(new URL(newUrl));
+    return NextResponse.redirect(newUrl);
+  }
+
+  if (auth && pathname.includes('auth')) {
+    const newUrl = new URL('/', request.nextUrl.origin);
+    return NextResponse.redirect(newUrl);
   }
 
   return NextResponse.next();

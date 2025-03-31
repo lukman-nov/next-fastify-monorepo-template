@@ -5,7 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { deepmerge } from 'deepmerge-ts';
 
-import type { Locales, MessagesType, Namespaces } from '../types';
+import type { Locales, MessagesType, Namespaces } from '../../types';
 
 interface GetAppMessages<T extends Namespaces> {
   ns: T;
@@ -19,10 +19,6 @@ export async function getAppMessages<T extends Namespaces>({
   ns,
   locale,
 }: GetAppMessages<T>): Promise<MessagesType<T>> {
-  if (typeof window !== 'undefined') {
-    throw new Error('getAppMessages can only be called on the server.');
-  }
-
   const messagesPath = path.join(__dirname, '../../locales', ns, `${locale}.json`);
   const globalsPath = path.join(__dirname, '../../locales/globals', `${locale}.json`);
 

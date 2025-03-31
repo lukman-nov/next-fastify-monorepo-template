@@ -24,3 +24,15 @@ export const SignUpSchema = z
   });
 
 export type SignUpSchemaProp = z.infer<typeof SignUpSchema>;
+
+export const VerifySocialAccount = z
+  .object({
+    username: usernameSchema,
+    password: passwordSchema,
+    confirmPassword: z.string().min(8).max(20),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    params: { i18n: 'password-not-match' },
+    path: ['confirmPassword'],
+  });
+export type VerifySocialAccountProp = z.infer<typeof VerifySocialAccount>;

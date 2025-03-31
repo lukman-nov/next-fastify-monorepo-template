@@ -4,16 +4,17 @@
   "version": "0.1.0",
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./types": "./types.d.ts"
   },
   "license": "MIT",
   "scripts": {
-    "dev": "tsc -w",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint . --max-warnings 0",
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
+    "@types/accept-language-parser": "^1.5.7",
     "@zx/eslint-config": "workspace:*",
     "@zx/prettier-config": "workspace:*",
     "@zx/tsconfig": "workspace:*",
@@ -23,6 +24,7 @@
   },
   "prettier": "@zx/prettier-config",
   "dependencies": {
+    "accept-language-parser": "^1.5.0",
     "deepmerge-ts": "^7.1.5",
     "use-intl": "catalog:",
     "zod": "catalog:"

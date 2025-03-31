@@ -6,6 +6,7 @@ import { bearer, username } from 'better-auth/plugins';
 
 import type { Roles } from '@zx/db';
 import { prisma } from '@zx/db';
+import { sendVerificationEmail } from '@zx/email';
 
 import { APP_NAME, AUTH_COOKIE, SESSION, USERNAME } from '../auth-config';
 import { env } from '../lib';
@@ -26,7 +27,11 @@ const authServer = {
   },
   advanced: {
     generateId: false,
-    cookiePrefix: AUTH_COOKIE.PREFIX,
+    cookies: {
+      session_token: {
+        name: AUTH_COOKIE,
+      },
+    },
   },
   plugins: [
     bearer(),
@@ -43,6 +48,17 @@ const authServer = {
     password: {
       hash: hashed,
       verify: compare,
+    },
+  },
+  emailVerification: {
+    sendOnSignUp: true,
+    autoSignInAfterVerification: true,
+    sendVerificationEmail: async ({ user, url }, request) => {
+      await sendVerificationEmail({
+        to: user.email,
+        headers: request?.headers,
+        url,
+      });
     },
   },
   socialProviders: {

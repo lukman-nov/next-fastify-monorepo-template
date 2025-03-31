@@ -2,7 +2,7 @@
 
 import { cookies } from 'next/headers';
 
-import type { Locales } from '@zx/i18n';
+import type { Locales } from '@zx/i18n/types';
 import { defaultLocale, i18nCookieName } from '@zx/i18n';
 
 export async function getUserLocale(): Promise<Locales> {

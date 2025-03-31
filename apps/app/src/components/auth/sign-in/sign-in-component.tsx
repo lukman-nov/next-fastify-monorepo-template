@@ -20,8 +20,8 @@ export default function SignInComponent({ className, ...props }: React.Component
         <CardContent className="grid p-0 md:grid-cols-2">
           <div className="flex flex-col gap-6 py-6">
             <div className="flex flex-col items-center text-center">
-              <h1 className="text-2xl font-bold">Welcome back</h1>
-              <p className="text-muted-foreground text-balance">Login to your Acme Inc account</p>
+              <h1 className="text-xl font-semibold">{t('title')}</h1>
+              <p className="text-muted-foreground text-sm text-balance">{t('enter_to_your_account')}</p>
             </div>
             <SignInForm className="px-6 md:px-8" />
             <div className="space-y-3 px-6 md:px-8">

@@ -43,11 +43,12 @@ export default function FormText({
       name={name}
       render={({ field }) => (
         <FormItem className={cn(className)} {...props}>
-          {children}
-          <div className="flex items-center justify-between">
-            <FormLabel className={`text-sm`}>{title}</FormLabel>
-            {errorPosition === 'top' && <FormMessage className="" />}
-          </div>
+          {children ?? (
+            <div className="flex items-center justify-between">
+              <FormLabel className={`text-sm`}>{title}</FormLabel>
+              {errorPosition === 'top' && <FormMessage className="" />}
+            </div>
+          )}
 
           <FormControl>
             <Input
@@ -67,17 +68,20 @@ export default function FormText({
           </FormControl>
 
           {description && (
-            <FormDescription
+            <div
               className={cn(
-                'inline-flex items-center gap-2 leading-normal [&>svg]:size-4 [&>svg]:text-blue-400',
+                'flex items-center justify-start gap-1',
                 form.formState.errors[name] && errorPosition === 'bottom' && 'hidden'
               )}
             >
-              <InfoIcon /> {description}
-            </FormDescription>
+              <div>
+                <InfoIcon className="size-4 text-blue-400" />
+              </div>
+              <FormDescription className="leading-normal">{description}</FormDescription>
+            </div>
           )}
           {errorPosition === 'bottom' && form.formState.errors[name] && (
-            <div className="[&>svg]:text-destructive inline-flex items-center gap-2 leading-normal [&>svg]:size-4">
+            <div className="[&>svg]:text-destructive inline-flex items-center gap-1 leading-normal [&>svg]:size-4">
               <TriangleAlertIcon /> <FormMessage />
             </div>
           )}

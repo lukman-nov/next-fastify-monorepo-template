@@ -1,8 +1,6 @@
 export const APP_NAME: string = 'ZeroX Project';
 
-export const AUTH_COOKIE = {
-  PREFIX: '@zx',
-};
+export const AUTH_COOKIE = '@zx.session_token';
 
 export const SESSION = {
   EXPIRES_IN: 60 * 60 * 24 * 7, // 7 days

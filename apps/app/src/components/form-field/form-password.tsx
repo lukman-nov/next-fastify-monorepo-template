@@ -2,7 +2,7 @@
 
 import type { FocusEventHandler } from 'react';
 import React from 'react';
-import { InfoIcon } from 'lucide-react';
+import { InfoIcon, TriangleAlertIcon } from 'lucide-react';
 import { useFormContext } from 'react-hook-form';
 
 import { FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@zx/ui/components/form';
@@ -39,11 +39,12 @@ export default function FormPassword({
       name={name}
       render={({ field }) => (
         <FormItem className={cn(className)} {...props}>
-          <div className="flex items-center justify-between">
-            <FormLabel className={`text-sm`}>{title}</FormLabel>
-            {errorPosition === 'top' && <FormMessage className="-mt-2" />}
-          </div>
-          {children}
+          {children ?? (
+            <div className="flex items-center justify-between">
+              <FormLabel className={`text-sm`}>{title}</FormLabel>
+              {errorPosition === 'top' && <FormMessage className="" />}
+            </div>
+          )}
 
           <FormControl>
             <InputPassword
@@ -62,14 +63,22 @@ export default function FormPassword({
           </FormControl>
 
           {description && (
-            <FormDescription className="inline-flex items-center gap-2 leading-normal [&>svg]:size-5 [&>svg]:text-blue-400">
-              <InfoIcon /> {description}
-            </FormDescription>
+            <div
+              className={cn(
+                'flex items-center justify-start gap-1',
+                form.formState.errors[name] && errorPosition === 'bottom' && 'hidden'
+              )}
+            >
+              <div>
+                <InfoIcon className="size-4 text-blue-400" />
+              </div>
+              <FormDescription className="leading-normal">{description}</FormDescription>
+            </div>
           )}
-          {errorPosition === 'bottom' && (
-            <span className="relative">
-              <FormMessage className="absolute -mt-1 leading-4" />
-            </span>
+          {errorPosition === 'bottom' && form.formState.errors[name] && (
+            <div className="[&>svg]:text-destructive inline-flex items-center gap-1 leading-normal">
+              <TriangleAlertIcon className="h-4 w-4" /> <FormMessage />
+            </div>
           )}
         </FormItem>
       )}
