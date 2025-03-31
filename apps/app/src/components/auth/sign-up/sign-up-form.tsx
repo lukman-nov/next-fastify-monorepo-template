@@ -73,6 +73,8 @@ export default function SignUpForm({ className, ...props }: React.ComponentProps
               type: 'manual',
               message: t('forms.errors.email_exist'),
             });
+          } else {
+            form.clearErrors('email');
           }
         }
       }
@@ -85,6 +87,8 @@ export default function SignUpForm({ className, ...props }: React.ComponentProps
               type: 'manual',
               message: t('forms.errors.username_exist'),
             });
+          } else {
+            form.clearErrors('username');
           }
         }
       }

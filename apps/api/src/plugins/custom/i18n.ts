@@ -3,13 +3,19 @@ import type { Messages } from 'use-intl';
 import fp from 'fastify-plugin';
 import { createTranslator } from 'use-intl';
 
-import type { Locales } from '@zx/i18n/types';
+import type { ApiMessages, Locales } from '@zx/i18n/types';
 import { defaultLocale, getAppMessages, locales } from '@zx/i18n';
 import { getUserLocale } from '@/utils/get-user-locale';
 
 declare module 'fastify' {
   export interface FastifyRequest {
     t: ReturnType<typeof createTranslator>;
+  }
+}
+
+declare module 'use-intl' {
+  export interface AppConfig {
+    Messages: ApiMessages;
   }
 }
 
