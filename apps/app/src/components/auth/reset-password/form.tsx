@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useMutation } from '@tanstack/react-query';
-import { ChevronLeftIcon, SaveIcon } from 'lucide-react';
+import { ChevronLeftIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
@@ -13,11 +13,11 @@ import { toast } from 'sonner';
 import type { ResetPasswordSchemaProp } from '@zx/shared';
 import { useI18nZodErrors } from '@zx/i18n';
 import { ResetPasswordSchema } from '@zx/shared';
-import { Button, buttonVariants } from '@zx/ui/components/button';
+import { buttonVariants } from '@zx/ui/components/button';
 import { Form } from '@zx/ui/components/form';
 import { cn } from '@zx/ui/lib/utils';
 import { FormPassword } from '@/components/form-filed';
-import { Icons } from '@/components/icons';
+import { SubmitButton } from '@/components/submit-button';
 import { resetPassword } from '@/lib/auth';
 
 export default function ResetPasswordForm({ className, ...props }: React.ComponentProps<'div'>) {
@@ -87,18 +87,7 @@ export default function ResetPasswordForm({ className, ...props }: React.Compone
               {t('back-to-login')}
             </Link>
 
-            <Button type="submit" variant="secondary" className="cursor-pointer">
-              {isPending ? (
-                <>
-                  {t('forms.loading')}
-                  <Icons.spinner className="animate-spin" />
-                </>
-              ) : (
-                <>
-                  {t('forms.submit')} <SaveIcon />
-                </>
-              )}
-            </Button>
+            <SubmitButton variant="secondary" disabled={!form.formState.isValid || isPending} />
           </div>
         </form>
       </Form>

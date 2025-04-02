@@ -4,7 +4,6 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { SaveIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
@@ -12,11 +11,10 @@ import { toast } from 'sonner';
 import type { CreatePasswordSchemaProp } from '@zx/shared';
 import { useI18nZodErrors } from '@zx/i18n';
 import { CreatePasswordSchema } from '@zx/shared';
-import { Button } from '@zx/ui/components/button';
 import { Form } from '@zx/ui/components/form';
 import { cn } from '@zx/ui/lib/utils';
 import { FormPassword } from '@/components/form-filed';
-import { Icons } from '@/components/icons';
+import { SubmitButton } from '@/components/submit-button';
 import { setPassword } from '@/lib/auth';
 
 export default function CreatePasswordForm({ className, ...props }: React.ComponentProps<'div'>) {
@@ -73,18 +71,7 @@ export default function CreatePasswordForm({ className, ...props }: React.Compon
             errorPosition="bottom"
           />
 
-          <Button type="button" variant="secondary" className="w-full cursor-pointer">
-            {isPending ? (
-              <>
-                {t('forms.loading')}
-                <Icons.spinner className="animate-spin" />
-              </>
-            ) : (
-              <>
-                {t('forms.submit')} <SaveIcon />
-              </>
-            )}
-          </Button>
+          <SubmitButton className="w-full" disabled={!form.formState.isValid || isPending} />
         </form>
       </Form>
     </div>

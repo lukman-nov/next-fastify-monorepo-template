@@ -8,8 +8,6 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": "pnpm env:load tsc --watch",
-    "env:load": "dotenv -e ../../.env --",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint . --max-warnings 0",
     "check-types": "tsc --noEmit --emitDeclarationOnly false"

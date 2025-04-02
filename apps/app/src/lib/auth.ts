@@ -41,7 +41,7 @@ export const resetPassword = async (payload: { token: string; newPassword: strin
   });
 };
 
-export const changePassword = async (payload: { userId: string; newPassword: string }) => {
+export const changePassword = async (payload: { userId: string; newPassword: string; currentPassword: string }) => {
   try {
     const ctx = await auth.$context;
     const hash = await ctx.password.hash(payload.newPassword);

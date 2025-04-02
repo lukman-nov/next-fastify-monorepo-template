@@ -11,12 +11,14 @@
       "password-must-lowercase": "Password harus mengandung huruf kecil.",
       "password-must-number": "Password harus mengandung angka.",
       "password-must-symbol": "Password harus mengandung spesial karakter (!@#$%^&*).",
-      "password-not-match": "Kata sandi tidak cocok."
+      "password-not-match": "Kata sandi tidak cocok.",
+      "verify-not-match": "Data yang dibutuhkan tidak cocok!"
     },
     "fistname": "Nama Depan",
     "lastname": "Nama Belakang",
     "username": "Nama Pengguna",
     "email": "Email",
+    "emailOrUsername": "Email/Nama Pengguna",
     "sign-in": "Masuk",
     "password": "Kata Sandi",
     "confirmPassword": "Ulangi Kata sandi",
@@ -32,7 +34,11 @@
     },
     "remember-me": "Ingat saya",
     "submit": "Kirim",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "save": "Simpan",
+    "newPassword": "Kata sandi baru",
+    "currentPassword": "Kata sandi saat ini",
+    "verify": "Verify"
   },
   "auth": {
     "sign-out": "Keluar",
@@ -106,6 +112,7 @@
       "YOU_ARE_NOT_ALLOWED_TO_UPDATE_THIS_TEAM": "Anda tidak diizinkan untuk memperbarui tim ini",
       "FAILED_TO_CREATE_USER": "Gagal membuat akun",
       "USER_ALREADY_EXISTS": "Pengguna sudah ada",
+      "USERNAME_ALREADY_EXISTS": "Nama pengguna sudah ada",
       "YOU_CANNOT_BAN_YOURSELF": "Anda tidak dapat melarang diri Anda sendiri",
       "YOU_ARE_NOT_ALLOWED_TO_CHANGE_USERS_ROLE": "Anda tidak diizinkan untuk mengubah peran pengguna",
       "YOU_ARE_NOT_ALLOWED_TO_CREATE_USERS": "Anda tidak diizinkan untuk membuat pengguna",
@@ -273,8 +280,15 @@
       "subject": "Setel ulang kata sandi Anda",
       "info-text": "Link ini berlaku selama 1 jam. Jika Anda tidak ingin mengubah kata sandi atau tidak memintanya, abaikan saja dan hapus pesan ini.",
       "button": "Setel ulang kata sandi",
-      "main-text": "Halo {name}, Seseorang baru saja meminta perubahan kata sandi untuk akun Ar Rohmah Insan Kamil Anda. Jika ini adalah Anda, Anda dapat mengatur kata sandi baru di sini:",
-      "title": "Atur ulang kata sandi Anda Ar Rohmah Insan Kamil"
+      "main-text": "Hai {name}, seseorang baru -baru ini meminta perubahan kata sandi untuk akun {sitename} Anda. \nJika ini Anda, Anda dapat mengatur kata sandi baru di sini:",
+      "title": "Atur ulang kata sandi Anda {sitename}"
+    },
+    "delete-account": {
+      "main-text": "Halo {name}, Seseorang baru saja meminta untuk penghapusan akun {sitename} Anda. Jika ini adalah Anda, Anda dapat gunakan tombol dibawah ini untuk melanjutkannya.",
+      "subject": "Penghapusan Akun {sitename}",
+      "button": "Hapus akun Saya",
+      "info-text": "Tindakan ini tidak dapat dibatalkan. Tindakan ini akan menghapus akun Anda secara permanen dan menghapus data Anda dari server kami.",
+      "title": "Penghapusan Akun"
     }
   }
 }

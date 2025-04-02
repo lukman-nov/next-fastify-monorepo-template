@@ -11,12 +11,14 @@
       "password-must-lowercase": "Password must contain lowercase letters.",
       "password-must-number": "Passwords must contain numbers.",
       "password-must-symbol": "Password must contain special characters (!@#$%^&*).",
-      "password-not-match": "Password does not match."
+      "password-not-match": "Password does not match.",
+      "verify-not-match": "The required data does not match!"
     },
     "fistname": "First Name",
     "lastname": "Last Name",
     "username": "Username",
     "email": "Email",
+    "emailOrUsername": "Email/Username",
     "sign-in": "Sign In",
     "password": "Password",
     "confirmPassword": "Re-Password",
@@ -32,7 +34,11 @@
     },
     "remember-me": "Remember Me",
     "submit": "Submit",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "save": "Save",
+    "newPassword": "New Password",
+    "currentPassword": "Current Password",
+    "verify": "Verify"
   },
   "auth": {
     "sign-out": "Sign Out",
@@ -106,6 +112,7 @@
       "YOU_ARE_NOT_ALLOWED_TO_UPDATE_THIS_TEAM": "You are not allowed to update this team",
       "FAILED_TO_CREATE_USER": "Failed to create user",
       "USER_ALREADY_EXISTS": "User already exists",
+      "USERNAME_ALREADY_EXISTS": "Username already exists",
       "YOU_CANNOT_BAN_YOURSELF": "You cannot ban yourself",
       "YOU_ARE_NOT_ALLOWED_TO_CHANGE_USERS_ROLE": "You are not allowed to change users role",
       "YOU_ARE_NOT_ALLOWED_TO_CREATE_USERS": "You are not allowed to create users",
@@ -271,10 +278,17 @@
     },
     "reset-password": {
       "subject": "Reset your password",
-      "main-text": "Hi {name}, Someone recently requested a password change for your Ar Rohmah Insan Kamil account. If this was you, you can set a new password here:",
+      "main-text": "Hi {name}, Someone recently requested a password change for your {sitename} account. If this was you, you can set a new password here:",
       "button": "Reset password",
       "info-text": "This link is valid for 1 hour. If you don't want to change your password or didn't request this, just ignore and delete this message.",
-      "title": "Reset your password Ar Rohmah Insan Kamil"
+      "title": "Reset your password {sitename}"
+    },
+    "delete-account": {
+      "main-text": "Hello {name}, Someone has just requested for the deletion of your {sitename} account. account. If this is you, you can use the button below to proceed.",
+      "subject": "Account Deletion {sitename}",
+      "button": "Delete my account",
+      "info-text": "This action cannot be undone. This will permanently delete your account and remove your data from our servers.",
+      "title": "Account Deletion"
     }
   }
 }

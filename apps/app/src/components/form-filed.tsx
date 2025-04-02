@@ -132,6 +132,7 @@ function FormIconLabel({
 interface FormPasswordProp {
   onBlur?: FocusEventHandler<HTMLInputElement>;
   children?: React.ReactNode;
+  autoComplete?: React.HTMLInputAutoCompleteAttribute;
 }
 
 function FormPassword({
@@ -144,6 +145,7 @@ function FormPassword({
   errorPosition = 'bottom',
   className,
   children,
+  autoComplete,
   ...props
 }: FormPasswordProp & FormFieldsBase) {
   const form = useFormContext();
@@ -167,7 +169,7 @@ function FormPassword({
               readOnly={readOnly}
               disabled={readOnly}
               value={field.value}
-              autoComplete="off"
+              autoComplete={autoComplete}
               onChange={(e) => field.onChange(e.target.value)}
               onBlur={(e) => {
                 field.onBlur();
@@ -337,13 +339,38 @@ function FormTextarea({
   );
 }
 
-function FormInfo({ message }: { message: string }) {
+interface FormInfoProp extends React.ComponentProps<'div'> {
+  variant?: 'default' | 'destructive' | 'waring';
+  message: string;
+}
+
+function FormInfo({ variant = 'default', message, className, ...props }: FormInfoProp) {
   return (
-    <div className="text-muted-foreground flex items-center gap-2 text-sm">
-      <span className="[&>svg]:size-4 [&>svg]:text-blue-400">
-        <InfoIcon />
-      </span>
-      <p className="">{message}</p>
+    <div className={cn('text-muted-foreground flex items-center gap-2 text-sm', className)} {...props}>
+      {variant === 'default' && (
+        <>
+          <span className="[&>svg]:size-4 [&>svg]:text-blue-400">
+            <InfoIcon />
+          </span>
+          <p>{message}</p>
+        </>
+      )}
+      {variant === 'destructive' && (
+        <>
+          <span className="[&>svg]:text-destructive-foreground [&>svg]:size-4">
+            <TriangleAlertIcon />
+          </span>
+          <p>{message}</p>
+        </>
+      )}
+      {variant === 'waring' && (
+        <>
+          <span className="[&>svg]:size-4 [&>svg]:text-yellow-400">
+            <TriangleAlertIcon />
+          </span>
+          <p>{message}</p>
+        </>
+      )}
     </div>
   );
 }

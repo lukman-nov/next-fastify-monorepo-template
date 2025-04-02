@@ -1,4 +1,38 @@
 {
   "hello-world": "Hello World",
-  "back-to-login": "Back to Login"
+  "back-to-login": "Back to Login",
+  "settings": {
+    "account": {
+      "change-username": "Change username",
+      "username-info": "This is your public display name. It can be your real name or a pseudonym. You can only change this once every 30 days.",
+      "dialog": {
+        "cancel": "Cancel",
+        "message-confirm": "Continue",
+        "username-confirm": "Are you sure you want to change your current username?",
+        "change-password-description": "Are you sure you want to change your current password?",
+        "change-password-dangers-message": "After changing the password you will be asked to log in again.",
+        "change-password-confirm-input": "If you agree please continue by filling in your e-mail.",
+        "change-password-input-placeholder": "Enter your e-mail"
+      },
+      "change-username-success": "Successfully changed username",
+      "link-account": "Link Accounts",
+      "unlink": "Unlink from {provider}",
+      "link-to": "Link to your {provider} account",
+      "connecting-info": "Connecting your account with your Google or Github account can make it easier for you to access your account when you want to log in to Home.",
+      "change-password": "Change Password",
+      "ignore-if": "Ignore if you do not want to change it",
+      "change-password-success": "Successfully changed password",
+      "password-info": "A password is required to access your account. Please be more careful if you want to change your password.",
+      "delete-account": {
+        "title": "Delete Account",
+        "info-message": "Once you delete your account, there is no going back. Please be certain.",
+        "button": "Delete your account",
+        "dialog-title": "Are you absolutely sure?",
+        "dialog-info-danger": "This is extremely important.",
+        "dialog-desc": "This action cannot be undone. This will permanently delete your account and remove your data from our servers.",
+        "label-verify": "To verify, type <verify>delete my account</verify> below",
+        "submit-button": "Delete this account"
+      }
+    }
+  }
 }

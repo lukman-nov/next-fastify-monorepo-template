@@ -1,5 +1,6 @@
-export const APP_NAME: string = 'ZeroX Project';
+export const APP_NAME = 'ZeroX Project';
 
+export const AUTH_COOKIE_PREFIX = '@zx';
 export const AUTH_COOKIE = '@zx.session_token';
 
 export const SESSION = {

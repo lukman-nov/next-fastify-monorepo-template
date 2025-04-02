@@ -1,4 +1,38 @@
 {
   "hello-world": "Halo dunia",
-  "back-to-login": "Kembali ke login"
+  "back-to-login": "Kembali ke login",
+  "settings": {
+    "account": {
+      "change-username": "Ubah nama pengguna",
+      "username-info": "Ini adalah nama tampilan publik Anda. Ini bisa berupa nama asli atau nama samaran. Anda hanya dapat mengubahnya sekali setiap 30 hari.",
+      "dialog": {
+        "cancel": "Batalkan",
+        "message-confirm": "Lanjutkan",
+        "username-confirm": "Apakah Anda yakin ingin mengubah nama pengguna Anda saat ini?",
+        "change-password-description": "Apakah Anda yakin ingin mengubah kata sandi Anda saat ini?",
+        "change-password-dangers-message": "Setelah mengubah password Anda akan diminta untuk login kembali.",
+        "change-password-confirm-input": "Jika Anda setuju, silakan lanjutkan dengan mengisi email Anda.",
+        "change-password-input-placeholder": "Masukkan email Anda"
+      },
+      "change-username-success": "Berhasil mengubah nama pengguna",
+      "link-account": "Kaitkan Akun",
+      "unlink": "Lepas kaitan dari {provider}",
+      "link-to": "Kaitkan ke akun {provider} Anda",
+      "connecting-info": "Menghubungkan akun anda dengan akun Google anda dapat memudahkan Anda untuk mengakses akun ketika ingin masuk ke Beranda.",
+      "change-password": "Ubah Kata Sandi",
+      "ignore-if": "Abaikan jika Anda tidak ingin mengubahnya",
+      "change-password-success": "Berhasil mengubah kata sandi",
+      "password-info": "Kata sandi diperlukan untuk mengakses akun Anda. \nHarap lebih berhati -hati jika Anda ingin mengubah kata sandi.",
+      "delete-account": {
+        "title": "Hapus akun",
+        "info-message": "Setelah Anda menghapus akun Anda, tidak ada jalan untuk kembali. \nHarap pastikan.",
+        "button": "Hapus akun Anda",
+        "dialog-title": "Apakah Anda benar-benar yakin?",
+        "dialog-info-danger": "Ini sangat penting.",
+        "dialog-desc": "Tindakan ini tidak bisa dibatalkan. \nIni akan secara permanen menghapus akun Anda dan menghapus data Anda dari server kami.",
+        "label-verify": "Untuk verifikasi, ketik <verify>delete my account</verify> dibawah ini",
+        "submit-button": "Hapus akun ini"
+      }
+    }
+  }
 }

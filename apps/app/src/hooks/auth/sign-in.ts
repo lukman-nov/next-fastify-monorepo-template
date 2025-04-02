@@ -63,7 +63,7 @@ export const useSignInWithPassword = () => {
       const { data, error } = await signIn.username({
         username,
         password: password,
-        rememberMe: false,
+        rememberMe,
       });
       if (error) throw new Error(error.code);
       return data;

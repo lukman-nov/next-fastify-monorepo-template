@@ -12,11 +12,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "tsup",
-    "dev": "pnpm env:load tsup --watch",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint . --max-warnings 0",
-    "env:load": "dotenv -e ../../.env --",
     "check-types": "tsc --noEmit --emitDeclarationOnly false"
   },
   "devDependencies": {

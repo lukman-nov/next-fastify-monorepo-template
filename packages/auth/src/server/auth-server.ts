@@ -6,9 +6,9 @@ import { bearer, username } from 'better-auth/plugins';
 
 import type { Roles } from '@zx/db';
 import { prisma } from '@zx/db';
-import { sendForgetPasswordEmail, sendVerificationEmail } from '@zx/email';
+import { sendDeleteAccountEmail, sendForgetPasswordEmail, sendVerificationEmail } from '@zx/email';
 
-import { APP_NAME, AUTH_COOKIE, SESSION, USERNAME } from '../auth-config';
+import { APP_NAME, AUTH_COOKIE, AUTH_COOKIE_PREFIX, SESSION, USERNAME } from '../auth-config';
 import { env } from '../lib';
 import { compare, hashed } from '../lib/utils';
 
@@ -27,6 +27,7 @@ const authServer = {
   },
   advanced: {
     generateId: false,
+    cookiePrefix: AUTH_COOKIE_PREFIX,
     cookies: {
       session_token: {
         name: AUTH_COOKIE,
@@ -84,6 +85,17 @@ const authServer = {
   },
   user: {
     modelName: 'user',
+    deleteUser: {
+      enabled: true,
+      sendDeleteAccountVerification: async ({ user, url }, request) => {
+        await sendDeleteAccountEmail({
+          to: user.email,
+          headers: request?.headers,
+          url,
+          user,
+        });
+      },
+    },
     additionalFields: {
       role: {
         type: 'string',

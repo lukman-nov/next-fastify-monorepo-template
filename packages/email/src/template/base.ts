@@ -1,4 +1,4 @@
-import { SITE_NAME } from '@zx/shared';
+import { LOGO_URL, SITE_NAME } from '@zx/shared';
 
 export const fontFamily = `font-family:-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, &#x27;Roboto&#x27;, &#x27;Oxygen&#x27;, &#x27;Ubuntu&#x27;, &#x27;Cantarell&#x27;, &#x27;Fira Sans&#x27;, &#x27;Droid Sans&#x27;, &#x27;Helvetica Neue&#x27;, sans-serif`;
 
@@ -10,7 +10,7 @@ export const baseTemplate = ({ title, tBody }: { title: string; tBody: string })
 
   <head>
     <link rel="preload" as="image"
-      href="https://res.cloudinary.com/dppwkqipf/image/upload/fl_preserve_transparency/v1743265953/u3sosgezdtofcna1tdof.jpg?_s=public-apps" />
+      href="${LOGO_URL}" />
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
     <meta name="x-apple-disable-message-reformatting" />
   </head>
@@ -35,7 +35,7 @@ export const baseTemplate = ({ title, tBody }: { title: string; tBody: string })
                         <tr>
                           <td>
                             <img alt="${SITE_NAME}" height="60"
-                              src="https://res.cloudinary.com/dppwkqipf/image/upload/fl_preserve_transparency/v1743265953/u3sosgezdtofcna1tdof.jpg?_s=public-apps"
+                              src="${LOGO_URL}"
                               style="display:block;outline:none;border:none;margin:0 auto;text-decoration:none"
                               width="60" />
                           </td>

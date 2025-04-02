@@ -11,11 +11,11 @@ import { toast } from 'sonner';
 import type { ForgetPasswordSchemaProp } from '@zx/shared';
 import { useI18nZodErrors } from '@zx/i18n';
 import { ForgetPasswordSchema } from '@zx/shared';
-import { Button, buttonVariants } from '@zx/ui/components/button';
+import { buttonVariants } from '@zx/ui/components/button';
 import { Form } from '@zx/ui/components/form';
 import { cn } from '@zx/ui/lib/utils';
 import { FormText } from '@/components/form-filed';
-import { Icons } from '@/components/icons';
+import { SubmitButton } from '@/components/submit-button';
 import { useForgetPassword } from '@/hooks/auth/forget-password';
 
 export default function ForgetPasswordForm({ className, ...props }: React.ComponentProps<'div'>) {
@@ -71,23 +71,16 @@ export default function ForgetPasswordForm({ className, ...props }: React.Compon
               <ChevronLeftIcon />
               {t('back-to-login')}
             </Link>
-            <Button
-              type="submit"
-              variant={'outline'}
-              className={cn('ms-auto cursor-pointer', className)}
-              disabled={isPending || !form.formState.isDirty}
-            >
-              {isPending ? (
-                <>
-                  {t('forms.loading')}
-                  <Icons.spinner className="animate-spin" />
-                </>
-              ) : (
+
+            <SubmitButton
+              className="ms-auto"
+              disabled={!form.formState.isValid || isPending}
+              text={
                 <>
                   {t('forms.continue')} <ChevronRightIcon />
                 </>
-              )}
-            </Button>
+              }
+            />
           </div>
         </form>
       </Form>
