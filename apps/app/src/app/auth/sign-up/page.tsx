@@ -1,6 +1,13 @@
+import type { Metadata } from 'next/types';
 import React from 'react';
 
-import SignUpComponent from '@/components/auth/sign-up/sign-up-component';
+import SignUpComponent from '@/components/auth/sign-up/components';
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: `Sign Up`,
+  };
+}
 
 export default function SignUpPage() {
   return (

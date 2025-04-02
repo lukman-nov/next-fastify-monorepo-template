@@ -6,7 +6,7 @@ import { bearer, username } from 'better-auth/plugins';
 
 import type { Roles } from '@zx/db';
 import { prisma } from '@zx/db';
-import { sendVerificationEmail } from '@zx/email';
+import { sendForgetPasswordEmail, sendVerificationEmail } from '@zx/email';
 
 import { APP_NAME, AUTH_COOKIE, SESSION, USERNAME } from '../auth-config';
 import { env } from '../lib';
@@ -48,6 +48,14 @@ const authServer = {
     password: {
       hash: hashed,
       verify: compare,
+    },
+    sendResetPassword: async ({ user, url }, request) => {
+      await sendForgetPasswordEmail({
+        to: user.email,
+        headers: request?.headers,
+        url,
+        user,
+      });
     },
   },
   emailVerification: {

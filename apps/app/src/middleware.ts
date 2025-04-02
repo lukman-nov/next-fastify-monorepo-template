@@ -14,7 +14,7 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(newUrl);
   }
 
-  if (auth && pathname.includes('auth')) {
+  if (auth && pathname.includes('auth') && !pathname.includes('create-password')) {
     const newUrl = new URL('/', request.nextUrl.origin);
     return NextResponse.redirect(newUrl);
   }

@@ -10,10 +10,11 @@ import { cn } from '@zx/ui/lib/utils';
 
 import { AuthGithubButton } from '../github-button';
 import { AuthGoogleButton } from '../google-button';
-import SignInForm from './sign-in-form';
+import SignInForm from './form';
 
 export default function SignInComponent({ className, ...props }: React.ComponentProps<'div'>) {
   const t = useTranslations('auth.sign-in');
+
   return (
     <div className={cn('flex flex-col gap-6', className)} {...props}>
       <Card className="overflow-hidden p-0">

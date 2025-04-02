@@ -1,11 +1,13 @@
 import '@zx/ui/globals.css';
 
-import type { Viewport } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { cookies } from 'next/headers';
 import { getLocale, getMessages } from 'next-intl/server';
 
+import { SITE_NAME } from '@zx/shared';
 import { cn } from '@zx/ui/lib/utils';
 import { Providers } from '@/components/providers';
+import { env } from '@/lib/env';
 import { fontVariables } from '@/lib/fonts';
 
 const META_THEME_COLORS = {
@@ -15,6 +17,14 @@ const META_THEME_COLORS = {
 
 export const viewport: Viewport = {
   themeColor: META_THEME_COLORS.light,
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
+  title: {
+    template: `%s | ${SITE_NAME}`,
+    default: SITE_NAME,
+  },
 };
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

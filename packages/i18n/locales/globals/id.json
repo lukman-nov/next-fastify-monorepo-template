@@ -31,7 +31,8 @@
       "confirmPassword-description": "Konfirmasikan kata sandi Anda"
     },
     "remember-me": "Ingat saya",
-    "submit": "Kirim"
+    "submit": "Kirim",
+    "loading": "Loading..."
   },
   "auth": {
     "sign-out": "Keluar",
@@ -122,6 +123,23 @@
       "TWO_FACTOR_NOT_ENABLED": "Dua faktor tidak diaktifkan",
       "BACKUP_CODES_NOT_ENABLED": "Kode cadangan tidak diaktifkan",
       "INVALID_BACKUP_CODE": "Kode cadangan tidak valid"
+    },
+    "create-password": {
+      "card-title": "Selamat datang, {name}",
+      "card-desc": "Harap buat kata sandi Anda terlebih dahulu.",
+      "success": "Berhasil membuat kata sandi baru.",
+      "password-desc": "Harap buat kata sandi login Anda terlebih dahulu.",
+      "cur-password-desc": "Konfirmasikan Kata Sandi Anda Saat Ini"
+    },
+    "forget-password": {
+      "card-title": "Lupakan kata sandi",
+      "card-desc": "Jika Anda ingin mengatur ulang kata sandi. \nSilakan isi informasi tentang akun Anda di bawah ini.",
+      "success": "Kami telah mengirim tautan reset kata sandi ke email Anda."
+    },
+    "reset-password": {
+      "card-title": "Setel ulang kata sandi",
+      "card-desc": "Silakan isi kata sandi baru Anda di bawah ini.",
+      "success": "Berhasil mengubah kata sandi"
     }
   },
   "ui": {
@@ -250,6 +268,13 @@
       "button": "Verifikasi alamat email saya",
       "caution-text": "ZeroX Project tidak akan pernah mengirimkan email kepada Anda dan meminta Anda untuk mengungkapkan atau memverifikasi kata sandi, kartu kredit atau nomor rekening perbankan.",
       "helper-text": "Jika tombol tidak berfungsi, Anda dapat mengklik tautan di bawah ini."
+    },
+    "reset-password": {
+      "subject": "Setel ulang kata sandi Anda",
+      "info-text": "Link ini berlaku selama 1 jam. Jika Anda tidak ingin mengubah kata sandi atau tidak memintanya, abaikan saja dan hapus pesan ini.",
+      "button": "Setel ulang kata sandi",
+      "main-text": "Halo {name}, Seseorang baru saja meminta perubahan kata sandi untuk akun Ar Rohmah Insan Kamil Anda. Jika ini adalah Anda, Anda dapat mengatur kata sandi baru di sini:",
+      "title": "Atur ulang kata sandi Anda Ar Rohmah Insan Kamil"
     }
   }
 }

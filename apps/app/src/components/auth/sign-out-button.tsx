@@ -38,7 +38,7 @@ export function SignOutButton({ text, className, ...props }: React.ComponentProp
       {isLoading ? (
         <Icons.spinner className="mr-2 h-5 w-5 motion-safe:animate-spin" />
       ) : (
-        <LogOutIcon className="mr-2 h-5 w-5" />
+        <LogOutIcon className="h-5 w-5" />
       )}
     </Button>
   );

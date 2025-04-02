@@ -36,3 +36,30 @@ export const VerifySocialAccount = z
     path: ['confirmPassword'],
   });
 export type VerifySocialAccountProp = z.infer<typeof VerifySocialAccount>;
+
+export const CreatePasswordSchema = z
+  .object({
+    password: passwordSchema,
+    confirmPassword: z.string(),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    params: { i18n: 'password-not-match' },
+    path: ['confirmPassword'],
+  });
+export type CreatePasswordSchemaProp = z.infer<typeof CreatePasswordSchema>;
+
+export const ForgetPasswordSchema = z.object({
+  email: z.string().email(),
+});
+export type ForgetPasswordSchemaProp = z.infer<typeof ForgetPasswordSchema>;
+
+export const ResetPasswordSchema = z
+  .object({
+    password: passwordSchema,
+    confirmPassword: z.string(),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    params: { i18n: 'password-not-match' },
+    path: ['confirmPassword'],
+  });
+export type ResetPasswordSchemaProp = z.infer<typeof ResetPasswordSchema>;

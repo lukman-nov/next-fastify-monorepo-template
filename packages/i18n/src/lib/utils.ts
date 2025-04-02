@@ -11,9 +11,11 @@ export function resolveLocale({ headers }: { headers?: Headers }): Locales {
   userLocaleHeader = headers?.get('accept-language') ?? defaultLocale;
   const parsedLocales = acceptLanguageParser.parse(userLocaleHeader);
 
-  const matchedLocale =
+  let matchedLocale =
     parsedLocales.map((lang) => lang.code).find((code): code is Locales => locales.includes(code as Locales)) ??
     userLocaleHeader;
+
+  if (matchedLocale === '*') matchedLocale = defaultLocale;
 
   return matchedLocale as Locales;
 }

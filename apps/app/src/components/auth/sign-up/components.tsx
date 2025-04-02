@@ -11,10 +11,11 @@ import { cn } from '@zx/ui/lib/utils';
 import AuthHeader from '../auth-header';
 import { AuthGithubButton } from '../github-button';
 import { AuthGoogleButton } from '../google-button';
-import SignUpForm from './sign-up-form';
+import SignUpForm from './form';
 
 export default function SignUpComponent({ className, ...props }: React.ComponentProps<'div'>) {
   const t = useTranslations('auth.sign-up');
+
   return (
     <div className={cn('grid min-h-svh w-full lg:grid-cols-2', className)} {...props}>
       <div className="bg-muted relative hidden lg:block">

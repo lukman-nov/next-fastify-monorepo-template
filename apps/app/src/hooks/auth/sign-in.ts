@@ -12,8 +12,8 @@ export const useSignInWithGoogle = () => {
         provider: 'google',
         requestSignUp: true,
         callbackURL: env.NEXT_PUBLIC_APP_URL,
-        newUserCallbackURL: `${env.NEXT_PUBLIC_APP_URL}/verification/social-account`,
         errorCallbackURL: `${env.NEXT_PUBLIC_APP_URL}/auth/error`,
+        newUserCallbackURL: `${env.NEXT_PUBLIC_APP_URL}/auth/create-password`,
       });
 
       if (error) throw new Error(error.code);
@@ -29,8 +29,8 @@ export const useSignInWithGithub = () => {
         provider: 'github',
         requestSignUp: true,
         callbackURL: env.NEXT_PUBLIC_APP_URL,
-        newUserCallbackURL: `${env.NEXT_PUBLIC_APP_URL}/verification/social-account`,
         errorCallbackURL: `${env.NEXT_PUBLIC_APP_URL}/auth/error`,
+        newUserCallbackURL: `${env.NEXT_PUBLIC_APP_URL}/auth/create-password`,
       });
 
       if (error) throw new Error(error.code);
@@ -51,18 +51,22 @@ export const useSignInWithPassword = () => {
       const email = emailOrUsername.includes('@') && emailOrUsername;
       const username = emailOrUsername;
       if (email) {
-        return await signIn.email({
+        const { data, error } = await signIn.email({
           email,
           password,
           rememberMe,
         });
+        if (error) throw new Error(error.code);
+        return data;
       }
 
-      return await signIn.username({
+      const { data, error } = await signIn.username({
         username,
         password: password,
         rememberMe: false,
       });
+      if (error) throw new Error(error.code);
+      return data;
     },
   });
 };

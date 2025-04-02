@@ -14,10 +14,9 @@ import { SignUpSchema } from '@zx/shared';
 import { Button } from '@zx/ui/components/button';
 import { Form } from '@zx/ui/components/form';
 import { cn } from '@zx/ui/lib/utils';
-import { useSignUpWithCredential } from '@/actions/auth/sign-up';
-import FormPassword from '@/components/form-field/form-password';
-import FormText from '@/components/form-field/form-text';
+import { FormPassword, FormText } from '@/components/form-filed';
 import { Icons } from '@/components/icons';
+import { useSignUpWithCredential } from '@/hooks/auth/sign-up';
 import { checkAvailableEmail } from '@/services/http/check-email';
 import { checkAvailableUsername } from '@/services/http/check-username';
 
@@ -53,10 +52,7 @@ export default function SignUpForm({ className, ...props }: React.ComponentProps
         onError(error) {
           if (error instanceof Error) {
             toast.error(t(`auth.errors.${error.message}` as never));
-          } else {
-            toast.error('Internal Server Error');
           }
-          console.log(' signUpWithCredential ~ error:', error);
         },
       }
     );

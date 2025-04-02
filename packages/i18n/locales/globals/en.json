@@ -31,7 +31,8 @@
       "confirmPassword-description": "Confirm your password"
     },
     "remember-me": "Remember Me",
-    "submit": "Submit"
+    "submit": "Submit",
+    "loading": "Loading..."
   },
   "auth": {
     "sign-out": "Sign Out",
@@ -122,6 +123,23 @@
       "TWO_FACTOR_NOT_ENABLED": "Two factor isn't enabled",
       "BACKUP_CODES_NOT_ENABLED": "Backup codes aren't enabled",
       "INVALID_BACKUP_CODE": "Invalid backup code"
+    },
+    "create-password": {
+      "card-title": "Welcome, {name}",
+      "card-desc": "Please create your password first.",
+      "success": "Successfully create a new password.",
+      "password-desc": "Please create your login password first.",
+      "cur-password-desc": "Confirm your current password"
+    },
+    "forget-password": {
+      "card-title": "Forget Password",
+      "card-desc": "If you want to reset the password. Please fill in the information about your account below.",
+      "success": "We've sent a password reset link to your email."
+    },
+    "reset-password": {
+      "card-title": "Reset Password",
+      "card-desc": "Please fill in your new password below.",
+      "success": "Successfully changed the password"
     }
   },
   "ui": {
@@ -250,6 +268,13 @@
       "button": "Verify My Email Address",
       "caution-text": "ZeroX Project will never send you an email asking you to reveal or verify your password, credit card or banking account number.",
       "helper-text": "If the button is not working you can click the link below."
+    },
+    "reset-password": {
+      "subject": "Reset your password",
+      "main-text": "Hi {name}, Someone recently requested a password change for your Ar Rohmah Insan Kamil account. If this was you, you can set a new password here:",
+      "button": "Reset password",
+      "info-text": "This link is valid for 1 hour. If you don't want to change your password or didn't request this, just ignore and delete this message.",
+      "title": "Reset your password Ar Rohmah Insan Kamil"
     }
   }
 }

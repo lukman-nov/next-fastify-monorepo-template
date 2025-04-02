@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 
 import { Button } from '@zx/ui/components/button';
-import { useSignInWithGithub } from '@/actions/auth/sign-in';
+import { useSignInWithGithub } from '@/hooks/auth/sign-in';
 
 import { Icons } from '../icons';
 

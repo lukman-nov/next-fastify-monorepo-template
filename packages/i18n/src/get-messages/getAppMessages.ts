@@ -23,7 +23,7 @@ export async function getAppMessages<T extends Namespaces>({
   const globalsPath = path.join(__dirname, '../../locales/globals', `${locale}.json`);
 
   if (!fs.existsSync(messagesPath) || !fs.existsSync(globalsPath)) {
-    throw new Error('Message file not found.');
+    throw new Error(`Message file not found!. Namespaces: ${ns} Locale: ${locale}`);
   }
 
   const messages = JSON.parse(fs.readFileSync(messagesPath, 'utf-8'));

@@ -43,7 +43,6 @@ export const baseTemplate = ({ title, tBody }: { title: string; tBody: string })
                       </tbody>
                     </table>
                     ${tBody}
-                    <hr style="width:100%;border:none;border-top:1px solid #eaeaea" />
                   </td>
                 </tr>
               </tbody>
